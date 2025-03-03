@@ -1,0 +1,36 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.question-card {
+    margin-bottom: 15px;
+}
+
+.question-title {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.code-editor {
+    width: 100%;
+    height: 120px;
+    font-family: monospace;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.run-button {
+    margin-top: 5px;
+}
