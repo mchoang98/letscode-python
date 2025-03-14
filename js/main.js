@@ -2,7 +2,7 @@ let questions = [];
 
 async function loadQuestions() {
     try {
-        const response = await fetch('data/exercises.json');
+        const response = await fetch('data/09_02_25.json');
         questions = await response.json();
         renderQuestions();
         loadSavedCodes();
@@ -47,13 +47,13 @@ function toggleContent(index) {
 // Lưu code vào localStorage
 function saveCode(index) {
     const code = document.getElementById(`code-${index}`).value;
-    localStorage.setItem(`exercise_code_${index}`, code);
+    sessionStorage.setItem(`exercise_code_${index}`, code);
 }
 
 // Tải code đã lưu từ localStorage
 function loadSavedCodes() {
     questions.forEach((_, index) => {
-        const savedCode = localStorage.getItem(`exercise_code_${index}`);
+        const savedCode = sessionStorage.getItem(`exercise_code_${index}`);
         if (savedCode) {
             document.getElementById(`code-${index}`).value = savedCode;
         }

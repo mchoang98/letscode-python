@@ -1,0 +1,32 @@
+[
+    {
+        "title": "1. Vật Lý - Xác Định Vật Nổi Hay Chìm",
+        "description": "Nam thả một vật vào nước và muốn biết nó sẽ nổi hay chìm.<br> Biết thể tích vật là V (m³), khối lượng vật là m (kg) và khối lượng riêng của nước là d (kg/m³), g là hằng số với giá trị = 9.8 m/s².<br> Tính lực đẩy Archimedes F = d * V * g.<br> Nếu F lớn hơn trọng lực (m * g), vật sẽ nổi, ngược lại vật sẽ chìm.<br> Trả về 'Nổi' hoặc 'Chìm'.",
+        "function": "def vat_noi_hay_chim(V: float, m: float, d: float) -> str:",
+        "example": "# V = 0.02, m = 15, d = 1000\n# Output: 'Nổi'"
+    },
+    {
+        "title": "2. Hóa Học - Xác Định Loại Dung Dịch",
+        "description": "Mai đang đo độ pH của một dung dịch và muốn biết đó là axit, bazơ hay trung tính.<br> Nếu pH < 7, dung dịch là 'Axit'.<br> Nếu pH > 7, dung dịch là 'Bazơ'.<br> Nếu pH = 7, dung dịch là 'Trung tính'.",
+        "function": "def loai_dung_dich(pH: float) -> str:",
+        "example": "# pH = 5.5\n# Output: 'Axit'"
+    },
+    {
+        "title": "3. Sinh Học - Xếp Loại BMI",
+        "description": "Tùng theo dõi chỉ số BMI của mình và muốn biết anh ấy thuộc nhóm cân nặng nào.<br> Công thức BMI = w / (h^2).<br> Nếu BMI < 18.5: 'Gầy'.<br> Nếu 18.5 ≤ BMI < 24.9: 'Bình thường'.<br> Nếu 25 ≤ BMI < 29.9: 'Thừa cân'.<br> Nếu ≥ 30: 'Béo phì'.",
+        "function": "def xep_loai_bmi(w: float, h: float) -> str:",
+        "example": "# w = 85, h = 1.75\n# Output: 'Thừa cân'"
+    },
+    {
+        "title": "4. Thiên Văn Học - Xác Định Loại Thiên Thể",
+        "description": "Một nhà thiên văn học quan sát một thiên thể và muốn xác định nó là hành tinh, sao hay tiểu hành tinh dựa vào khối lượng m (kg).<br> Nếu m > 10^25, đó là 'Sao'.<br> Nếu 10^23 ≤ m ≤ 10^25, đó là 'Hành tinh'.<br> Nếu m < 10^23, đó là 'Tiểu hành tinh'.",
+        "function": "def loai_thien_the(m: float) -> str:",
+        "example": "# m = 5e24\n# Output: 'Hành tinh'"
+    },
+    {
+        "title": "5. Địa Lý - Xác Định Bán Cầu",
+        "description": "Lan đang du lịch và muốn biết cô ấy đang ở bán cầu nào dựa vào vĩ độ lat.<br> Nếu lat > 0, cô ấy ở 'Bán cầu Bắc'.<br> Nếu lat < 0, cô ấy ở 'Bán cầu Nam'.<br> Nếu lat = 0, cô ấy ở 'Đường xích đạo'.",
+        "function": "def ban_cau(lat: float) -> str:",
+        "example": "# lat = -22.9\n# Output: 'Bán cầu Nam'"
+    }
+]
