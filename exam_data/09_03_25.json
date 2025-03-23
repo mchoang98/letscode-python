@@ -1,0 +1,62 @@
+[
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 5\nx += x - x // 2\nprint(x)",
+        "options": ["7", "8", "5", "3"],
+        "answer": "8"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "a = 4\nb = 2\nc = a ** b // a * b + b % a\nprint(c)",
+        "options": ["4", "5", "10", "2"],
+        "answer": "10"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 7\ny = x > 5 and x < 10\nprint(y)",
+        "options": ["True", "False", "Lỗi chương trình", "None"],
+        "answer": "True"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 8\ny = 2\nx %= y * 3\nprint(x)",
+        "options": ["0", "2", "8", "1"],
+        "answer": "2"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = True\ny = False\nz = x and y or not x\nprint(z)",
+        "options": ["True", "False", "None", "Lỗi"],
+        "answer": "False"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "a = 10\nb = a > 5 and a < 20 or a % 2 == 0\nprint(b)",
+        "options": ["True", "False", "Lỗi chương trình", "None"],
+        "answer": "True"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 6\ny = 2\nz = x // y + x % y * 2\nprint(z)",
+        "options": ["3", "4", "6", "7"],
+        "answer": "3"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 4\ny = 5\nx *= y + 2\nprint(x)",
+        "options": ["28", "20", "24", "32"],
+        "answer": "28"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 5\ny = 3\nz = (x > y) and (x % 2 == 0) or (y < 5)\nprint(z)",
+        "options": ["True", "False", "Lỗi chương trình", "None"],
+        "answer": "True"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "a = 5\nb = 10\nc = 15\nprint(a < b < c and a + b >= c)",
+        "options": ["True", "False", "Lỗi chương trình", "None"],
+        "answer": "True"
+    }
+]

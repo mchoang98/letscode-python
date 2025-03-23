@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Kiểm tra tam giác và phân loại",
+        "description": "Nhập vào ba cạnh tam giác (a, b, c). Kiểm tra xem chúng có tạo thành tam giác hợp lệ không và xác định loại tam giác: tam giác đều, tam giác cân, tam giác vuông.",
+        "function": "def kiem_tra_tam_giac(a: int, b: int, c: int) -> str:",
+        "example": "# Input: a = 3, b = 4, c = 5\n# Output: 'Tam giác vuông'"
+    },    
+    {
+        "title": "Xác định mùa trong năm",
+        "description": "Nhập vào một tháng (1-12), trả về mùa tương ứng theo lịch Việt Nam: Xuân (1-3), Hạ (4-6), Thu (7-9), Đông (10-12). Nếu nhập tháng không hợp lệ, trả về thông báo lỗi.",
+        "function": "def xac_dinh_mua(thang: int) -> str:",
+        "example": "# Input: thang = 3\n# Output: 'Xuân'"
+    },    
+    {
+        "title": "3. Xử lý điểm thi đại học",
+        "description": "Nhập vào điểm 3 môn: Toán, Lý, Hóa và điểm chuẩn.<br> - Tính tổng điểm = Toán + Lý + Hóa.<br> - Nếu tổng điểm >= điểm chuẩn, thí sinh 'Đậu', ngược lại 'Rớt'.<br> - Nếu có môn nào bị điểm liệt (dưới 1.0), thí sinh bị 'Rớt' dù tổng điểm có đạt hay không.",
+        "function": "def xet_tuyen(toan: float, ly: float, hoa: float, diem_chuan: float) -> str:",
+        "example": "# Input: toan = 7.5, ly = 6.0, hoa = 8.0, diem_chuan = 21.0\n# Output: 'Đậu'"
+    },    
+    {
+        "title": "Xếp hạng điểm ELO cờ vua",
+        "description": "Nhập vào điểm ELO của một kỳ thủ và xác định hạng theo chuẩn FIDE:<br> - Dưới 1200: 'Người chơi mới'.<br> - Từ 1200 đến 1399: 'Người chơi trung bình'.<br> - Từ 1400 đến 1599: 'Người chơi khá'.<br> - Từ 1600 đến 1799: 'Người chơi giỏi'.<br> - Từ 1800 đến 1999: 'Chuyên nghiệp'.<br> - Từ 2000 đến 2199: 'Candidate Master'.<br> - Từ 2200 đến 2299: 'FIDE Master'.<br> - Từ 2300 đến 2399: 'International Master'.<br> - Từ 2400 trở lên: 'Grandmaster'.",
+        "function": "def xep_hang_elo(elo: int) -> str:",
+        "example": "# Input: elo = 1500\n# Output: 'Người chơi khá'"
+    },    
+    {
+        "title": "Đổi tiền ATM (Đơn giản)",
+        "description": "Nhập vào một số tiền cần rút và tính số tờ tiền cần rút ra với các mệnh giá cố định: 500K, 200K, 100K.<br> - Rút theo mệnh giá lớn nhất trước để tối ưu số tờ tiền.<br> - Nếu số tiền không chia hết cho 100K, trả về thông báo lỗi.",
+        "function": "def doi_tien_atm_don_gian(tien: int) -> dict:",
+        "example": "# Input: tien = 800000\n# Output: {500000: 1, 200000: 1, 100000: 1}"
+    }    
+    
+]

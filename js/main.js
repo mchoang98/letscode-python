@@ -1,8 +1,17 @@
 let questions = [];
 
 async function loadQuestions() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const date = urlParams.get('date');
+    console.log("Ngày hợp lệ:", date);
+    
+    if (!date) {
+        alert("Lỗi: Không có ngày hợp lệ!");
+        return;
+    }
+
     try {
-        const response = await fetch('data/09_02_25.json');
+        const response = await fetch(`data/${date}.json`);
         questions = await response.json();
         renderQuestions();
         loadSavedCodes();

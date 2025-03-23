@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh Sách Bài Tập</title>
+    <title>Danh Sách Đề thi</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
-        <h1 class="text-2xl font-bold mb-4">Danh Sách Bài Tập</h1>
+        <h1 class="text-2xl font-bold mb-4">Danh Sách Đề thi</h1>
         <ul id="exercise-list" class="space-y-4"></ul>
     </div>
     
     <script>
         const exercises = [
-            { date: "16_03_25", title: "Bài tập ngày 16/03/2025", participants: 5 },
-            { date: "09_03_25", title: "Bài tập ngày 09/03/2025", participants: 8 },
-            { date: "02_03_25", title: "Bài tập ngày 02/03/2025", participants: 3 }
+            { date: "23_03_25", title: "Đề thi ngày 23/03/2025"},
+            { date: "16_03_25", title: "Đề thi ngày 16/03/2025"},
+            { date: "09_03_25", title: "Đề thi ngày 09/03/2025"}
         ];
 
         const listContainer = document.getElementById("exercise-list");
@@ -31,7 +31,7 @@
         });
 
         function navigateToExercise(date) {
-            window.location.href = `exercises_detail.html?date=${date}`;
+            window.location.href = `exam_detail.html?date=${date}`;
         }
     </script>
 </body>

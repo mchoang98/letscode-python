@@ -1,0 +1,112 @@
+[
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 7\nif x > 5:\n    print('Lớn hơn 5')\nelse:\n    print('Không lớn hơn 5')",
+        "options": [
+            "Lớn hơn 5",
+            "Không lớn hơn 5",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "Lớn hơn 5"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 3\nif x > 5:\n    print('Lớn hơn 5')\nelif x < 5:\n    print('Nhỏ hơn 5')\nelse:\n    print('Bằng 5')",
+        "options": [
+            "Lớn hơn 5",
+            "Nhỏ hơn 5",
+            "Bằng 5",
+            "Lỗi cú pháp"
+        ],
+        "answer": "Nhỏ hơn 5"
+    },
+    {
+        "q": "Toán tử điều kiện nào được sử dụng để kiểm tra tính đúng của hai giá trị?",
+        "code": "",
+        "options": [
+            "=",
+            "==",
+            "!=",
+            "<="
+        ],
+        "answer": "=="
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 10\nif x % 2 == 0 and x > 5:\n    print('Điều kiện đúng')\nelse:\n    print('Điều kiện sai')",
+        "options": [
+            "Điều kiện đúng",
+            "Điều kiện sai",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "Điều kiện đúng"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 5\nprint('Dương' if x > 0 else 'Âm')",
+        "options": [
+            "Dương",
+            "Âm",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "Dương"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = -3\ny = 'Dương' if x > 0 else 'Âm'\nprint(y)",
+        "options": [
+            "Dương",
+            "Âm",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "Âm"
+    },
+    {
+        "q": "Toán tử nào dùng để kiểm tra điều kiện hoặc trong Python?",
+        "code": "",
+        "options": [
+            "and",
+            "or",
+            "not",
+            "=="
+        ],
+        "answer": "or"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 0\nif not x:\n    print('False')\nelse:\n    print('True')",
+        "options": [
+            "False",
+            "True",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "False"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 8\ny = 5\nif x > 5:\n    if y < 10:\n        print('Hợp lệ')\n    else:\n        print('Không hợp lệ')",
+        "options": [
+            "Hợp lệ",
+            "Không hợp lệ",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "Hợp lệ"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 15\nprint('Lớn hơn 10' if x > 10 else 'Không lớn hơn 10')",
+        "options": [
+            "Lớn hơn 10",
+            "Không lớn hơn 10",
+            "Lỗi cú pháp",
+            "Không có đầu ra"
+        ],
+        "answer": "Lớn hơn 10"
+    }
+]
