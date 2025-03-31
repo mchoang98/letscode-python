@@ -1,0 +1,112 @@
+[
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "my_list = [10, 20, 30, 40]<br>print(my_list[1])",
+        "options": [
+            "10",
+            "20",
+            "30",
+            "40"
+        ],
+        "answer": "20"
+    },
+    {
+        "q": "Lệnh nào dùng để thêm một phần tử vào cuối danh sách?",
+        "code": "",
+        "options": [
+            "append()",
+            "insert()",
+            "extend()",
+            "add()"
+        ],
+        "answer": "append()"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "my_list = [1, 2, 3, 4, 5]<br>my_list.remove(3)<br>print(my_list)",
+        "options": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 4, 5]",
+            "[1, 2, 3, 5]",
+            "Lỗi cú pháp"
+        ],
+        "answer": "[1, 2, 4, 5]"
+    },
+    {
+        "q": "Cách nào để lấy tất cả giá trị trong dictionary?",
+        "code": "",
+        "options": [
+            "my_dict.keys()",
+            "my_dict.values()",
+            "my_dict.items()",
+            "Không có cách nào"
+        ],
+        "answer": "my_dict.values()"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "my_dict = {'a': 100, 'b': 200, 'c': 300}<br>print(my_dict.get('b'))",
+        "options": [
+            "100",
+            "200",
+            "300",
+            "Lỗi cú pháp"
+        ],
+        "answer": "200"
+    },
+    {
+        "q": "Lệnh nào được sử dụng để xóa một phần tử khỏi dictionary?",
+        "code": "",
+        "options": [
+            "del my_dict[key]",
+            "remove(my_dict[key])",
+            "pop(my_dict, key)",
+            "clear(my_dict, key)"
+        ],
+        "answer": "del my_dict[key]"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "my_list = ['apple', 'banana', 'cherry']<br>my_list.append('date')<br>print(my_list)",
+        "options": [
+            "['apple', 'banana', 'cherry']",
+            "['apple', 'banana', 'cherry', 'date']",
+            "['apple', 'banana', 'date', 'cherry']",
+            "Lỗi cú pháp"
+        ],
+        "answer": "['apple', 'banana', 'cherry', 'date']"
+    },
+    {
+        "q": "Cách nào để lấy danh sách tất cả các key-value trong dictionary?",
+        "code": "",
+        "options": [
+            "my_dict.keys()",
+            "my_dict.values()",
+            "my_dict.items()",
+            "Không có cách nào"
+        ],
+        "answer": "my_dict.items()"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "my_dict = {'x': 10, 'y': 20}<br>my_dict['z'] = 30<br>print(my_dict)",
+        "options": [
+            "{'x': 10, 'y': 20, 'z': 30}",
+            "{'x': 10, 'y': 20}",
+            "{'z': 30}",
+            "Lỗi cú pháp"
+        ],
+        "answer": "{'x': 10, 'y': 20, 'z': 30}"
+    },
+    {
+        "q": "Lệnh nào được sử dụng để xóa toàn bộ dictionary?",
+        "code": "",
+        "options": [
+            "del my_dict",
+            "my_dict.clear()",
+            "pop(my_dict)",
+            "Tất cả đều đúng"
+        ],
+        "answer": "my_dict.clear()"
+    }
+]

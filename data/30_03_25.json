@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Bảng cửu chương",
+        "description": "Nhập vào một số N (từ 1 đến 9). Viết chương trình in ra bảng cửu chương của số đó. Mỗi dòng hiển thị phép nhân từ 1 đến 10 với số N.",
+        "function": "def bang_cuu_chuong(N: int):",
+        "example": "# Input: N = 5\n# Output:\n5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\n...\n5 x 10 = 50"
+    },
+    {
+        "title": "Tìm số nguyên tố",
+        "description": "Nhập vào một số nguyên N (N > 0). Viết chương trình kiểm tra xem N có phải là số nguyên tố hay không. Một số nguyên tố là số lớn hơn 1 và chỉ chia hết cho 1 và chính nó.",
+        "function": "def la_so_nguyen_to(N: int) -> bool:",
+        "example": "# Input: N = 7\n# Output: True\n# Giải thích: 7 chỉ chia hết cho 1 và 7 nên là số nguyên tố."
+    },
+    {
+        "title": "Dãy Fibonacci",
+        "description": "Nhập vào một số nguyên dương N. Viết chương trình in ra N số đầu tiên của dãy Fibonacci. Dãy Fibonacci bắt đầu với 0 và 1, mỗi số tiếp theo là tổng của hai số trước đó.",
+        "function": "def fibonacci(N: int) -> list:",
+        "example": "# Input: N = 5\n# Output: [0, 1, 1, 2, 3]\n# Giải thích: 0, 1, (0+1)=1, (1+1)=2, (1+2)=3"
+    },
+    {
+        "title": "Kiểm tra số Palindrome",
+        "description": "Nhập vào một số nguyên N (N >= 0). Viết chương trình kiểm tra xem N có phải là số Palindrome hay không. Một số Palindrome là số đọc xuôi và ngược đều giống nhau.",
+        "function": "def la_palindrome(N: int) -> bool:",
+        "example": "# Input: N = 121\n# Output: True\n# Giải thích: 121 khi đảo ngược vẫn là 121 nên là số Palindrome."
+    },
+    {
+        "title": "Sắp xếp danh sách số",
+        "description": "Nhập vào một danh sách số nguyên. Viết chương trình sử dụng vòng lặp để sắp xếp danh sách theo thứ tự tăng dần mà không dùng hàm sort() của Python.",
+        "function": "def sap_xep_danh_sach(arr: list) -> list:",
+        "example": "# Input: [5, 2, 9, 1, 5, 6]\n# Output: [1, 2, 5, 5, 6, 9]\n# Giải thích: Danh sách được sắp xếp theo thứ tự tăng dần."
+    }
+]

@@ -77,7 +77,9 @@
             });
 
             try {
-                const response = await fetch("exam_data/09_03_25.json"); // Đổi thành "data/exam_data/09_03_25.json" nếu cần
+                const urlParams = new URLSearchParams(window.location.search);
+                const date = urlParams.get('date');
+                const response = await fetch(`exam_data/${date}.json`); // Đổi thành "data/exam_data/09_03_25.json" nếu cần
                 const questions = await response.json();
 
                 questions.forEach((item, index) => {
