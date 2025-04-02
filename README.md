@@ -31,7 +31,7 @@ LetsCode-Python is a web-based platform designed to help students learn Python t
 - **Styling**: Tailwind CSS
 - **Code Execution**: Pyodide.js
 - **File Management**: JSZip for ZIP file generation
-- **Hosting**: Vercel or GitHub Pages
+- **Hosting**: Firebase hosting
 
 ## Contributions
 We welcome contributions! Feel free to submit pull requests or report issues on GitHub.
