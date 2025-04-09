@@ -1,0 +1,21 @@
+[
+    {
+      "title": "13. Print Function (HackerRank)",
+      "description": "Viết một hàm nhận vào một số nguyên dương <code>n</code>.<br><br><b>Mục tiêu:</b><br>In ra các số từ <code>1</code> đến <code>n</code> liền nhau trên cùng một dòng, <b>không khoảng trắng, không dấu phẩy, không xuống dòng</b>.<br><br><b>Yêu cầu:</b><br><ul><li>Duyệt qua từng số từ <code>1</code> đến <code>n</code> bằng vòng lặp <code>for</code>.</li><li>Sử dụng <code>print(i, end=\"\")</code> để in liền nhau.</li></ul><br><b>Ví dụ:</b><br><code>Input:</code> n = 5<br><code>Output:</code> <b>12345</b>",
+      "function": "def print_function(n: int) -> None:",
+      "example": "# Input: n = 5\n# Output: 12345"
+    },
+    {
+      "title": "14. List Comprehensions (HackerRank)",
+      "description": "Viết một hàm nhận vào 4 số nguyên không âm <code>x</code>, <code>y</code>, <code>z</code>, <code>n</code>.<br><br><b>Mục tiêu:</b><br>Trả về <b>danh sách các danh sách con</b> với cấu trúc <code>[i, j, k]</code> thỏa điều kiện:<br><ul><li>0 ≤ i ≤ x</li><li>0 ≤ j ≤ y</li><li>0 ≤ k ≤ z</li><li>i + j + k ≠ n</li></ul><br><b>Gợi ý:</b><br>Có thể dùng <code>for</code> lồng nhau hoặc <code>list comprehension</code>.<br><br><b>Ví dụ:</b><br><code>Input:</code> x = 1, y = 1, z = 1, n = 2<br><code>Output:</code><br><code>[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]</code>",
+      "function": "def list_comprehension(x: int, y: int, z: int, n: int) -> list[list[int]]:",
+      "example": "# Input: x = 1, y = 1, z = 1, n = 2\n# Output: [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]"
+    },
+    {
+      "title": "15. Loops (HackerRank)",
+      "description": "Viết một hàm nhận vào số nguyên <code>n</code>.<br><br><b>Mục tiêu:</b><br>In ra <b>bình phương</b> của các số từ <code>0</code> đến <code>n - 1</code>, mỗi số trên <b>một dòng riêng</b>.<br><br><b>Yêu cầu:</b><br><ul><li>Duyệt từ <code>0</code> đến <code>n - 1</code> bằng <code>for i in range(n)</code>.</li><li>Với mỗi <code>i</code>, in ra <code>i * i</code>.</li></ul><br><b>Ví dụ:</b><br><code>Input:</code> n = 5<br><code>Output:</code><br><code>0<br>1<br>4<br>9<br>16</code>",
+      "function": "def loop_squares(n: int) -> None:",
+      "example": "# Input: n = 5\n# Output:\n# 0\n# 1\n# 4\n# 9\n# 16"
+    }
+  ]
+  

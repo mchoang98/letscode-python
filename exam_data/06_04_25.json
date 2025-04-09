@@ -1,0 +1,67 @@
+[
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "s = 0\nfor i in range(5):\n    s += i\nprint(s)",
+        "options": ["10", "15", "5", "20"],
+        "answer": "10"
+    },
+    {
+        "q": "Kết quả in ra cuối cùng là gì?",
+        "code": "total = 1\nfor i in range(1, 4):\n    total *= i\nprint(total)",
+        "options": ["6", "24", "10", "1"],
+        "answer": "6"
+    },
+    {
+        "q": "Đoạn code sau sẽ in ra bao nhiêu dòng?",
+        "code": "for i in range(3):\n    for j in range(2):\n        print(i, j)",
+        "options": ["6", "2", "3", "5"],
+        "answer": "6"
+    },
+    {
+        "q": "Giá trị cuối cùng của biến x là gì?",
+        "code": "x = 0\nfor i in range(1, 5):\n    x += i\nprint(x)",
+        "options": ["10", "15", "5", "6"],
+        "answer": "10"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 1\nfor i in range(3):\n    x = x + i\nprint(x)",
+        "options": ["4", "3", "6", "1"],
+        "answer": "4"
+    },
+    {
+        "q": "Câu lệnh `for i in range(5):` sẽ tạo ra bao nhiêu lần lặp?",
+        "code": "",
+        "options": ["4", "5", "6", "Không xác định"],
+        "answer": "5"
+    },
+    {
+        "q": "Trong vòng lặp `for i in range(2, 10, 2)`, giá trị của biến `i` sẽ là?",
+        "code": "",
+        "options": ["2, 4, 6, 8", "2, 3, 4, 5", "2, 5, 8", "2, 4, 6, 8, 10"],
+        "answer": "2, 4, 6, 8"
+    },
+    {
+        "q": "Tham số thứ ba trong hàm `range(start, stop, step)` có ý nghĩa gì?",
+        "code": "",
+        "options": ["Giá trị bắt đầu", "Giá trị kết thúc", "Bước nhảy giữa các giá trị", "Số lần lặp"],
+        "answer": "Bước nhảy giữa các giá trị"
+    },
+    {
+        "q": "Hàm `range(5)` trong Python sẽ tạo ra chuỗi số nào?",
+        "code": "",
+        "options": ["1, 2, 3, 4, 5", "0, 1, 2, 3, 4", "0, 2, 4, 6, 8", "1, 3, 5, 7, 9"],
+        "answer": "0, 1, 2, 3, 4"
+    },
+    {
+        "q": "Khi nào nên sử dụng vòng lặp `for i in range(...)`?",
+        "code": "",
+        "options": [
+            "Khi biết trước số lần lặp",
+            "Khi không biết trước số lần lặp",
+            "Chỉ khi làm việc với chuỗi",
+            "Chỉ khi lặp với danh sách"
+        ],
+        "answer": "Khi biết trước số lần lặp"
+    }
+]
