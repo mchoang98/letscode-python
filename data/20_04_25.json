@@ -1,0 +1,33 @@
+[
+    {
+      "title": "1. Ứng Dụng To-Do List",
+      "description": "Tạo ứng dụng quản lý công việc cá nhân chạy trên console.<br>- Thêm công việc<br>- Xem danh sách công việc<br>- Đánh dấu hoàn thành<br>- Xoá công việc<br>- Thoát chương trình<br>Sử dụng vòng lặp while để hiển thị menu và xử lý chức năng.",
+      "function": "def todo_list():",
+      "example": "# Input: chọn 1 (thêm), nhập 'Học Python'<br># Output: Công việc đã thêm: Học Python"
+    },
+    {
+      "title": "2. Máy Tính Mini",
+      "description": "Viết chương trình máy tính đơn giản thực hiện các phép tính (+, -, *, /) giữa 2 số.<br>Cho phép nhập nhiều phép tính liên tiếp.<br>Dừng khi nhập 'exit'.<br>- Kiểm tra chia cho 0<br>- Sử dụng vòng lặp while và break để điều khiển chương trình.",
+      "function": "def may_tinh():",
+      "example": "# Input: 8 * 9<br># Output: 72"
+    },
+    {
+      "title": "3. Game Đoán Số Bí Mật",
+      "description": "Tạo trò chơi cho người dùng đoán một số bí mật từ 1 đến 100.<br>Gợi ý nếu số lớn hơn hoặc nhỏ hơn.<br>Dừng khi đoán đúng.<br>- Dùng while, break, đếm số lần đoán.",
+      "function": "def game_doan_so():",
+      "example": "# Input: đoán 50 → 30 → 42<br># Output: Đúng rồi! Bạn đoán đúng sau 3 lần."
+    },
+    {
+      "title": "4. Bộ Đếm Ký Tự",
+      "description": "Nhập một chuỗi, đếm tần suất xuất hiện của từng ký tự (không phân biệt hoa thường).<br>Bỏ qua khoảng trắng bằng continue.",
+      "function": "def dem_ky_tu(s: str) -> dict:",
+      "example": "# Input: 'Hello World'<br># Output: {'h':1, 'e':1, 'l':3, 'o':2, 'w':1, 'r':1, 'd':1}"
+    },
+    {
+      "title": "5. Quản Lý Sinh Viên",
+      "description": "Viết ứng dụng đơn giản quản lý sinh viên bằng danh sách và vòng lặp:<br>- Thêm sinh viên (tên + điểm)<br>- Hiển thị danh sách<br>- Tìm kiếm sinh viên theo tên<br>- Thoát chương trình<br>Dùng while True và menu chọn chức năng.",
+      "function": "def quan_ly_sv():",
+      "example": "# Input: thêm 'Nam', điểm 9.0<br># Output: Đã thêm Nam (9.0)"
+    }
+  ]
+  
