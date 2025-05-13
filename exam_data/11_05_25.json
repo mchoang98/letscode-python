@@ -1,0 +1,52 @@
+[
+    {
+        "q": "Hàm trong Python là gì?",
+        "options": ["Một đoạn mã chỉ thực hiện một nhiệm vụ duy nhất", "Một khối mã có thể tái sử dụng để thực hiện các nhiệm vụ cụ thể", "Một biến lưu trữ kết quả của phép toán", "Một kiểu dữ liệu trong Python"],
+        "answer": "Một khối mã có thể tái sử dụng để thực hiện các nhiệm vụ cụ thể"
+    },
+    {
+        "q": "Câu lệnh nào được sử dụng để định nghĩa một hàm trong Python?",
+        "options": ["function", "def", "lambda", "function_def"],
+        "answer": "def"
+    },
+    {
+        "q": "Điều gì xảy ra nếu một hàm không có từ khóa `return`?",
+        "options": ["Hàm sẽ trả về `None`", "Hàm sẽ gây lỗi", "Hàm không thực hiện được gì", "Hàm tự động trả về giá trị `0`"],
+        "answer": "Hàm sẽ trả về `None`"
+    },
+    {
+        "q": "Khi nào bạn nên sử dụng tham số mặc định trong hàm?",
+        "options": ["Khi bạn muốn đảm bảo rằng người dùng phải nhập giá trị cho tham số", "Khi bạn muốn tham số có thể nhận giá trị mặc định nếu không được cung cấp", "Khi tham số không có giá trị mặc định nào", "Khi tham số luôn phải có giá trị trả về"],
+        "answer": "Khi bạn muốn tham số có thể nhận giá trị mặc định nếu không được cung cấp"
+    },
+    {
+        "q": "Hàm lambda trong Python khác gì so với hàm thông thường?",
+        "options": ["Lambda có thể có nhiều biểu thức", "Lambda có thể có chỉ một biểu thức và không cần `return`", "Lambda phải có tên", "Lambda không thể trả về giá trị"],
+        "answer": "Lambda có thể có chỉ một biểu thức và không cần `return`"
+    },
+    {
+        "q": "Một hàm có thể trả về bao nhiêu giá trị trong Python?",
+        "options": ["Một giá trị duy nhất", "Một giá trị hoặc nhiều giá trị dưới dạng tuple", "Không thể trả về giá trị", "Tùy thuộc vào loại dữ liệu"],
+        "answer": "Một giá trị hoặc nhiều giá trị dưới dạng tuple"
+    },
+    {
+        "q": "Cái gì sau đây không phải là một quy tắc khi đặt tên hàm trong Python?",
+        "options": ["Tên hàm phải bắt đầu bằng chữ cái hoặc dấu gạch dưới `_`", "Tên hàm không thể chứa dấu cách", "Tên hàm có thể chứa các ký tự đặc biệt như `@`", "Tên hàm không được trùng với từ khóa trong Python"],
+        "answer": "Tên hàm có thể chứa các ký tự đặc biệt như `@`"
+    },
+    {
+        "q": "Hàm nào dưới đây sẽ trả về tổng của các số từ 1 đến 10 trong Python?",
+        "options": ["`sum = lambda x: sum(x)`", "`def add_numbers(): return sum(range(1, 11))`", "`def add_numbers(): return 10 + 20`", "`def add_numbers(): return sum(range(1, 10))`"],
+        "answer": "`def add_numbers(): return sum(range(1, 11))`"
+    },
+    {
+        "q": "Keyword `return` trong hàm có vai trò gì?",
+        "options": ["In ra kết quả", "Dừng vòng lặp", "Trả về giá trị và kết thúc hàm", "Xóa biến cục bộ"],
+        "answer": "Trả về giá trị và kết thúc hàm"
+    },
+    {
+        "q": "Điều nào đúng về phạm vi biến (scope) trong hàm?",
+        "options": ["Biến trong hàm là toàn cục", "Biến toàn cục có thể thay đổi trong hàm mà không cần khai báo", "Biến được khai báo trong hàm chỉ có phạm vi trong hàm", "Biến trong hàm sẽ tự động lưu ra ngoài hàm"],
+        "answer": "Biến được khai báo trong hàm chỉ có phạm vi trong hàm"
+    }
+]

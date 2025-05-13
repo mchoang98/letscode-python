@@ -1,5 +1,5 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
     // Cấu hình Firebase
     const firebaseConfig = {
@@ -16,7 +16,7 @@
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
 
-    // Load câu hỏi từ JSON
+    // Load câu hỏi từ file JSON
     async function loadQuestions() {
         try {
             const urlParams = new URLSearchParams(window.location.search);
@@ -56,7 +56,7 @@
         }
     }
 
-    // Nộp bài và chấm điểm
+    // Xử lý nộp bài
     document.addEventListener("DOMContentLoaded", () => {
         loadQuestions();
 
@@ -79,7 +79,7 @@
             try {
                 const urlParams = new URLSearchParams(window.location.search);
                 const date = urlParams.get('date');
-                const response = await fetch(`exam_data/${date}.json`); // Đổi thành "data/exam_data/09_03_25.json" nếu cần
+                const response = await fetch(`exam_data/${date}.json`);
                 const questions = await response.json();
 
                 questions.forEach((item, index) => {
@@ -104,8 +104,9 @@
                     answers: results
                 };
 
-                // Lưu kết quả lên Firebase
-                await push(ref(database, "quiz_results"), userResult);
+                // Lưu kết quả lên Firebase theo ngày và username
+                await set(ref(database, `quiz_results/${date}/${userName}`), userResult);
+
                 document.getElementById("result").innerHTML = `<p class="text-green-600 font-semibold">Bạn đã trả lời đúng ${score}/${questions.length} câu.</p>`;
             } catch (error) {
                 console.error("Lỗi khi xử lý bài làm:", error);
