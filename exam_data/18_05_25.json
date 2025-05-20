@@ -1,0 +1,102 @@
+[
+  {
+    "q": "Lớp (class) trong Python dùng để làm gì?",
+    "options": [
+      "Định nghĩa một đối tượng cụ thể",
+      "Định nghĩa khuôn mẫu để tạo ra các đối tượng",
+      "Gọi một hàm có sẵn",
+      "Lưu trữ dữ liệu tạm thời"
+    ],
+    "answer": "Định nghĩa khuôn mẫu để tạo ra các đối tượng"
+  },
+  {
+    "q": "Phương thức đặc biệt __init__ có chức năng gì trong lớp?",
+    "options": [
+      "Định nghĩa phương thức chung cho tất cả các đối tượng",
+      "Hàm khởi tạo được gọi khi tạo đối tượng mới",
+      "Hàm gọi để xoá đối tượng",
+      "Hàm để in thông tin đối tượng"
+    ],
+    "answer": "Hàm khởi tạo được gọi khi tạo đối tượng mới"
+  },
+  {
+    "q": "Từ khóa nào đại diện cho chính đối tượng hiện tại trong phương thức lớp?",
+    "options": [
+      "this",
+      "self",
+      "me",
+      "obj"
+    ],
+    "answer": "self"
+  },
+  {
+    "q": "Phát biểu nào sau đây đúng về đối tượng (object)?",
+    "options": [
+      "Đối tượng là khuôn mẫu để tạo ra lớp",
+      "Đối tượng là thể hiện cụ thể của một lớp",
+      "Đối tượng là một biến toàn cục",
+      "Đối tượng không có thuộc tính"
+    ],
+    "answer": "Đối tượng là thể hiện cụ thể của một lớp"
+  },
+  {
+    "q": "Phương thức nào sau đây gọi để in thông tin đối tượng 'sv1' của lớp Student trong ví dụ bài giảng?",
+    "options": [
+      "Student.introduce()",
+      "sv1.introduce()",
+      "introduce.sv1()",
+      "print.introduce()"
+    ],
+    "answer": "sv1.introduce()"
+  },
+  {
+    "q": "Tính năng nào cho phép một lớp con kế thừa thuộc tính và phương thức từ lớp cha?",
+    "options": [
+      "Bao đóng (Encapsulation)",
+      "Đa hình (Polymorphism)",
+      "Kế thừa (Inheritance)",
+      "Trừu tượng (Abstraction)"
+    ],
+    "answer": "Kế thừa (Inheritance)"
+  },
+  {
+    "q": "Đa hình (Polymorphism) trong OOP có nghĩa là gì?",
+    "options": [
+      "Một đối tượng có nhiều tên",
+      "Nhiều phương thức cùng tên nhưng có cách hoạt động khác nhau",
+      "Một lớp có thể kế thừa nhiều lớp khác",
+      "Phương thức không có tham số"
+    ],
+    "answer": "Nhiều phương thức cùng tên nhưng có cách hoạt động khác nhau"
+  },
+  {
+    "q": "Biến nào sau đây chỉ tồn tại trong phạm vi một phương thức của lớp?",
+    "options": [
+      "Biến toàn cục (global)",
+      "Biến static",
+      "Biến local",
+      "Biến constant"
+    ],
+    "answer": "Biến local"
+  },
+  {
+    "q": "Phát biểu nào đúng về từ khóa 'global' trong Python khi làm việc với biến trong hàm?",
+    "options": [
+      "Cho phép hàm tạo biến mới",
+      "Cho phép thay đổi biến toàn cục bên trong hàm",
+      "Khai báo biến cục bộ mới",
+      "Dùng để định nghĩa lớp"
+    ],
+    "answer": "Cho phép thay đổi biến toàn cục bên trong hàm"
+  },
+  {
+    "q": "Phương thức speak() trong ví dụ kế thừa của lớp Dog được gọi là gì trong OOP?",
+    "options": [
+      "Phương thức ẩn (Hidden method)",
+      "Phương thức kế thừa (Inherited method)",
+      "Phương thức ghi đè (Override method)",
+      "Phương thức trừu tượng (Abstract method)"
+    ],
+    "answer": "Phương thức ghi đè (Override method)"
+  }
+]

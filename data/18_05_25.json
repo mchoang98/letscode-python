@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Tính diện tích và chu vi hình chữ nhật",
+        "description": "Nhập vào chiều dài và chiều rộng của hình chữ nhật.<br>Viết 2 hàm phụ:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Hàm tính chu vi: chu_vi = 2 * (h + w)<br>&nbsp;&nbsp;&nbsp;&nbsp;- Hàm tính diện tích: dien_tich = h * w<br>Sau đó viết hàm chính gọi cả 2 hàm và trả về chuỗi:<br>&nbsp;&nbsp;&nbsp;&nbsp;'Chu vi: <giá trị>, Diện tích: <giá trị>'",
+        "function": "def thong_tin_hinh_chu_nhat(h: float, w: float) -> str:",
+        "example": "# Input: h = 3, w = 4\n# Output: 'Chu vi: 14.0, Diện tích: 12.0'"
+    },
+    {
+        "title": "Kiểm tra số hoàn hảo",
+        "description": "Nhập vào một số nguyên dương n.<br>Viết một hàm phụ để tính tổng các ước số thực sự của n (không bao gồm n).<br>Sau đó viết hàm chính kiểm tra:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Nếu tổng các ước = n ➝ là số hoàn hảo ➝ trả về True<br>&nbsp;&nbsp;&nbsp;&nbsp;- Ngược lại ➝ trả về False",
+        "function": "def la_so_hoan_hao(n: int) -> bool:",
+        "example": "# Input: n = 28\n# Output: True"
+    },
+    {
+        "title": "Phân tích câu - chuẩn hóa và đếm từ",
+        "description": "Nhập vào một chuỗi là một câu văn (có thể có khoảng trắng thừa ở đầu/cuối).<br>Viết hàm phụ để chuẩn hóa câu:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Loại bỏ khoảng trắng thừa<br>&nbsp;&nbsp;&nbsp;&nbsp;- Viết hoa chữ cái đầu tiên<br>Viết hàm phụ thứ 2 để đếm số từ (các từ cách nhau bởi 1 hoặc nhiều dấu cách).<br>Sau đó, hàm chính trả về chuỗi:<br>&nbsp;&nbsp;&nbsp;&nbsp;'Câu: '<câu đã chuẩn>, Số từ: <số lượng>'",
+        "function": "def phan_tich_cau(chuoi: str) -> str:",
+        "example": "# Input: '   xin chao cac ban   '\n# Output: 'Câu: 'Xin chao cac ban', Số từ: 4'"
+    },
+    {
+        "title": "Tính trung bình cộng các số lẻ",
+        "description": "Nhập vào một danh sách các số nguyên.<br>Viết một hàm phụ để lọc ra các số lẻ.<br>Viết tiếp một hàm để tính trung bình cộng các số đó.<br>Nếu không có số lẻ nào ➝ trả về 0.<br>Hàm chính gọi 2 hàm phụ và trả về kết quả trung bình.",
+        "function": "def trung_binh_so_le(lst: list[int]) -> float:",
+        "example": "# Input: [1, 2, 3, 4, 5]\n# Output: 3.0"
+    },
+    {
+        "title": "Xếp loại học sinh theo điểm trung bình",
+        "description": "Nhập vào điểm Toán, Văn và Anh.<br>Viết một hàm phụ để tính điểm trung bình 3 môn:<br>&nbsp;&nbsp;&nbsp;&nbsp;diem_tb = (toan + van + anh) / 3<br>Viết một hàm khác để xác định xếp loại dựa trên điểm trung bình:<br>&nbsp;&nbsp;&nbsp;&nbsp;- Giỏi: từ 8 trở lên<br>&nbsp;&nbsp;&nbsp;&nbsp;- Khá: từ 6.5 đến dưới 8<br>&nbsp;&nbsp;&nbsp;&nbsp;- Trung bình: từ 5 đến dưới 6.5<br>&nbsp;&nbsp;&nbsp;&nbsp;- Yếu: dưới 5<br>Hàm chính sử dụng 2 hàm phụ để trả về chuỗi:<br>&nbsp;&nbsp;&nbsp;&nbsp;'Điểm TB: <giá trị làm tròn 2 chữ số>, Xếp loại: <loại>'",
+        "function": "def thong_tin_hoc_sinh(toan: float, van: float, anh: float) -> str:",
+        "example": "# Input: toan = 7, van = 8, anh = 6.5\n# Output: 'Điểm TB: 7.17, Xếp loại: Khá'"
+    }
+]
