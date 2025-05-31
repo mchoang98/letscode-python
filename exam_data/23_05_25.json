@@ -1,0 +1,77 @@
+[
+  {
+    "q": "Trong Python, biến là gì?",
+    "code": "",
+    "options": [
+      "Một kiểu dữ liệu đặc biệt",
+      "Một tên dùng để lưu giá trị trong bộ nhớ",
+      "Một từ khóa có sẵn",
+      "Một hàm mặc định"
+    ],
+    "answer": "Một tên dùng để lưu giá trị trong bộ nhớ"
+  },
+  {
+    "q": "Câu lệnh nào dưới đây khai báo biến và gán giá trị đúng cách trong Python?",
+    "code": "",
+    "options": ["let x = 5", "int x = 5", "x := 5", "x = 5"],
+    "answer": "x = 5"
+  },
+  {
+    "q": "Kiểu dữ liệu của giá trị 3.14 trong Python là gì?",
+    "code": "",
+    "options": ["int", "float", "str", "bool"],
+    "answer": "float"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "<pre><code>x = True<br>y = False<br>print(x + y)</code></pre>",
+    "options": ["1", "TrueFalse", "True", "Lỗi"],
+    "answer": "1"
+  },
+  {
+    "q": "Biến x có giá trị là gì sau khi chạy đoạn code sau? (Giả sử người dùng nhập: '10')",
+    "code": "<pre><code>x = input(\"Nhập số:\")</code></pre>",
+    "options": ["Số nguyên 10", "Số thực 10.0", "Chuỗi '10'", "Boolean True"],
+    "answer": "Chuỗi '10'"
+  },
+  {
+    "q": "Hàm print() trong Python có tác dụng gì?",
+    "code": "",
+    "options": [
+      "Nhập dữ liệu từ bàn phím",
+      "Gán giá trị cho biến",
+      "Hiển thị thông tin ra màn hình",
+      "Kiểm tra kiểu dữ liệu"
+    ],
+    "answer": "Hiển thị thông tin ra màn hình"
+  },
+  {
+    "q": "Giá trị của biến x là gì sau đoạn code sau?",
+    "code": "<pre><code>x = None<br>print(type(x))</code></pre>",
+    "options": [
+      "&lt;class &#39;str&#39;&gt;",
+      "&lt;class &#39;int&#39;&gt;",
+      "&lt;class &#39;NoneType&#39;&gt;",
+      "&lt;class &#39;bool&#39;&gt;"
+    ],
+    "answer": "&lt;class &#39;NoneType&#39;&gt;"
+  },
+  {
+    "q": "Giá trị của biến x là gì sau đoạn code sau?",
+    "code": "<pre><code>x = 5<br>x = x + 2</code></pre>",
+    "options": ["5", "2", "7", "Lỗi vì không thể gán lại"],
+    "answer": "7"
+  },
+  {
+    "q": "Hàm input() luôn trả về kiểu dữ liệu gì?",
+    "code": "",
+    "options": ["int", "float", "str", "bool"],
+    "answer": "str"
+  },
+  {
+    "q": "Biến nào sau đây được gán giá trị kiểu boolean?",
+    "code": "",
+    "options": ["x = 'True'", "x = True", "x = 1", "x = \"False\""],
+    "answer": "x = True"
+  }
+]

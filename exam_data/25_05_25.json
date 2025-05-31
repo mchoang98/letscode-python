@@ -1,0 +1,167 @@
+[
+  {
+    "q": "Cú pháp nào sau đây dùng để tạo một danh sách trong Python?",
+    "code": "",
+    "options": [
+      "danh_sach = (1, 2, 3)",
+      "danh_sach = {1, 2, 3}",
+      "danh_sach = [1, 2, 3]",
+      "danh_sach = <1, 2, 3>"
+    ],
+    "answer": "danh_sach = [1, 2, 3]"
+  },
+  {
+    "q": "Kết quả của biểu thức [\"a\", \"b\"] + [\"c\", \"d\"] là gì?",
+    "code": "",
+    "options": [
+      "[\"a\", \"b\", \"c\", \"d\"]",
+      "[\"a\" + \"b\", \"c\" + \"d\"]",
+      "[\"abcd\"]",
+      "[\"a\", \"b\", \"cd\"]"
+    ],
+    "answer": "[\"a\", \"b\", \"c\", \"d\"]"
+  },
+  {
+    "q": "Phương thức nào dùng để thêm phần tử vào cuối danh sách?",
+    "code": "",
+    "options": [
+      "add()",
+      "append()",
+      "insert()",
+      "push()"
+    ],
+    "answer": "append()"
+  },
+  {
+    "q": "Kết quả của fruits = [\"cam\", \"xoài\", \"ổi\"]; print(fruits[-1]) là gì?",
+    "code": "fruits = [\"cam\", \"xoài\", \"ổi\"]\nprint(fruits[-1])",
+    "options": [
+      "cam",
+      "ổi",
+      "xoài",
+      "Lỗi"
+    ],
+    "answer": "ổi"
+  },
+  {
+    "q": "Phương thức pop(i) trong danh sách có tác dụng gì?",
+    "code": "",
+    "options": [
+      "Xóa phần tử đầu tiên có giá trị bằng i",
+      "Xóa phần tử tại chỉ số i",
+      "Xóa toàn bộ danh sách",
+      "Chèn phần tử vào vị trí i"
+    ],
+    "answer": "Xóa phần tử tại chỉ số i"
+  },
+  {
+    "q": "Lệnh nào sau đây dùng để sắp xếp danh sách ds = [4, 1, 3] theo thứ tự tăng dần?",
+    "code": "ds = [4, 1, 3]",
+    "options": [
+      "ds.reverse()",
+      "sort(ds)",
+      "ds.sort()",
+      "ds.sorted()"
+    ],
+    "answer": "ds.sort()"
+  },
+  {
+    "q": "Toán tử nào được dùng để kiểm tra xem một giá trị có trong danh sách hay không?",
+    "code": "",
+    "options": [
+      "==",
+      "!=",
+      "in",
+      "is"
+    ],
+    "answer": "in"
+  },
+  {
+    "q": "Hàm sum(ds) trả về kết quả gì?",
+    "code": "",
+    "options": [
+      "Trung bình các phần tử trong danh sách",
+      "Số phần tử trong danh sách",
+      "Tổng các phần tử trong danh sách",
+      "Danh sách sắp xếp tăng dần"
+    ],
+    "answer": "Tổng các phần tử trong danh sách"
+  },
+  {
+    "q": "Kết quả của len([1, 2, 3, 4]) là gì?",
+    "code": "len([1, 2, 3, 4])",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "0"
+    ],
+    "answer": "4"
+  },
+  {
+    "q": "Phương thức nào sau đây tạo một bản sao của danh sách?",
+    "code": "",
+    "options": [
+      "copy()",
+      "clone()",
+      "backup()",
+      "duplicate()"
+    ],
+    "answer": "copy()"
+  },
+  {
+    "q": "Để chèn phần tử 'chuối' vào vị trí thứ 1 của danh sách fruits = [\"táo\", \"cam\"], dùng lệnh nào?",
+    "code": "fruits = [\"táo\", \"cam\"]",
+    "options": [
+      "fruits.insert(1, \"chuối\")",
+      "fruits.append(1, \"chuối\")",
+      "fruits.add(1, \"chuối\")",
+      "fruits[1] = \"chuối\""
+    ],
+    "answer": "fruits.insert(1, \"chuối\")"
+  },
+  {
+    "q": "Duyệt qua danh sách fruits = [\"cam\", \"xoài\", \"ổi\"] bằng chỉ số dùng vòng lặp nào?",
+    "code": "",
+    "options": [
+      "for fruit in fruits:",
+      "for i in fruits:",
+      "for i in range(len(fruits)):",
+      "while i < len(fruits):"
+    ],
+    "answer": "for i in range(len(fruits)):"
+  },
+  {
+    "q": "Phương thức remove(x) có chức năng gì?",
+    "code": "",
+    "options": [
+      "Xóa phần tử tại vị trí x",
+      "Xóa phần tử cuối cùng",
+      "Xóa phần tử đầu tiên có giá trị x",
+      "Xóa tất cả các phần tử"
+    ],
+    "answer": "Xóa phần tử đầu tiên có giá trị x"
+  },
+  {
+    "q": "Kết quả của [1, 2] * 3 là gì?",
+    "code": "",
+    "options": [
+      "[1, 2, 3]",
+      "[3, 6]",
+      "[1, 2, 1, 2, 1, 2]",
+      "[1, 2, 2, 3, 1, 2]"
+    ],
+    "answer": "[1, 2, 1, 2, 1, 2]"
+  },
+  {
+    "q": "Phương thức nào sau đây dùng để xóa tất cả phần tử trong danh sách?",
+    "code": "",
+    "options": [
+      "remove()",
+      "del()",
+      "clear()",
+      "empty()"
+    ],
+    "answer": "clear()"
+  }
+]

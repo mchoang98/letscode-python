@@ -1,0 +1,112 @@
+[
+  {
+    "q": "Từ điển trong Python được dùng để lưu trữ dữ liệu dưới dạng nào?",
+    "code": "",
+    "options": [
+      "Danh sách các giá trị",
+      "Cặp khóa - giá trị",
+      "Các phần tử liền kề",
+      "Chuỗi ký tự"
+    ],
+    "answer": "Cặp khóa - giá trị"
+  },
+  {
+    "q": "Cách truy cập giá trị trong từ điển theo khóa là gì?",
+    "code": "<pre>sinh_vien = {'ten': 'A', 'tuoi': 20}</pre>",
+    "options": [
+      "sinh_vien.get('ten')",
+      "sinh_vien['ten']",
+      "Cả 2 cách trên",
+      "Không cách nào"
+    ],
+    "answer": "Cả 2 cách trên"
+  },
+  {
+    "q": "Phương thức nào dùng để lấy danh sách tất cả các khóa trong từ điển?",
+    "code": "",
+    "options": [
+      "values()",
+      "items()",
+      "keys()",
+      "get()"
+    ],
+    "answer": "keys()"
+  },
+  {
+    "q": "Phương thức nào trả về danh sách các cặp (key, value) trong từ điển?",
+    "code": "",
+    "options": [
+      "items()",
+      "values()",
+      "keys()",
+      "pop()"
+    ],
+    "answer": "items()"
+  },
+  {
+    "q": "Kết quả của đoạn mã sau là gì?",
+    "code": "<pre>d = {'a':1, 'b':2}\nprint('a' in d)</pre>",
+    "options": [
+      "False",
+      "True",
+      "Lỗi",
+      "None"
+    ],
+    "answer": "True"
+  },
+  {
+    "q": "Phương thức nào dùng để xóa một phần tử theo khóa và trả về giá trị đã xóa?",
+    "code": "",
+    "options": [
+      "popitem()",
+      "pop()",
+      "remove()",
+      "clear()"
+    ],
+    "answer": "pop()"
+  },
+  {
+    "q": "Phương thức nào dùng để cập nhật từ điển với các cặp khóa - giá trị mới?",
+    "code": "",
+    "options": [
+      "update()",
+      "add()",
+      "append()",
+      "insert()"
+    ],
+    "answer": "update()"
+  },
+  {
+    "q": "Câu lệnh nào dùng để xóa toàn bộ phần tử trong từ điển?",
+    "code": "",
+    "options": [
+      "clear()",
+      "delete()",
+      "remove()",
+      "popitem()"
+    ],
+    "answer": "clear()"
+  },
+  {
+    "q": "Để duyệt tất cả các cặp khóa - giá trị trong từ điển, ta dùng vòng lặp như thế nào?",
+    "code": "",
+    "options": [
+      "for k in dict: print(k)",
+      "for v in dict.values(): print(v)",
+      "for k, v in dict.items(): print(k, v)",
+      "for i in range(len(dict)): print(dict[i])"
+    ],
+    "answer": "for k, v in dict.items(): print(k, v)"
+  },
+  {
+    "q": "Kết quả của đoạn mã sau là gì?",
+    "code": "<pre>d = {'x': 10, 'y': 20}\nd['z'] = 30\nprint(d)</pre>",
+    "options": [
+      "{'x': 10, 'y': 20}",
+      "{'x': 10, 'y': 20, 'z': 30}",
+      "{'z': 30}",
+      "Lỗi"
+    ],
+    "answer": "{'x': 10, 'y': 20, 'z': 30}"
+  }
+]
