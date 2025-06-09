@@ -1,0 +1,62 @@
+[
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "class A:\n    def __init__(self):\n        self.x = 10\n\nobj = A()\nprint(obj.x)",
+        "options": ["10", "None", "Lỗi chương trình", "Không có gì được in ra"],
+        "answer": "10"
+    },
+    {
+        "q": "Đâu là cách đặt tên để biểu diễn thành viên 'protected' theo quy ước trong Python?",
+        "code": "",
+        "options": ["x", "_x", "__x", "__x__"],
+        "answer": "_x"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "class A:\n    def __init__(self):\n        self.__x = 5\n\na = A()\nprint(a.__x)",
+        "options": ["5", "None", "Lỗi chương trình", "_A__x"],
+        "answer": "Lỗi chương trình"
+    },
+    {
+        "q": "Làm cách nào để truy cập biến __x được khai báo private trong lớp A từ bên ngoài?",
+        "code": "class A:\n    def __init__(self):\n        self.__x = 100\n\na = A()",
+        "options": ["a.x", "a.__x", "a._A__x", "Không thể truy cập được"],
+        "answer": "a._A__x"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "class A:\n    def __init__(self):\n        self._x = 7\n\na = A()\nprint(a._x)",
+        "options": ["7", "Lỗi chương trình", "None", "Không in ra gì"],
+        "answer": "7"
+    },
+    {
+        "q": "Biến nào sau đây sẽ được Python thực hiện biến đổi tên (name mangling)?",
+        "code": "",
+        "options": ["x", "_x", "__x", "__x__"],
+        "answer": "__x"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "class A:\n    def __init__(self):\n        self.__x = 50\n    def printX(self):\n        print(self.__x)\n\na = A()\na.printX()",
+        "options": ["Lỗi chương trình", "50", "None", "__x"],
+        "answer": "50"
+    },
+    {
+        "q": "Phát biểu nào đúng về biến __x trong lớp?",
+        "code": "",
+        "options": ["Có thể truy cập trực tiếp từ bên ngoài", "Không thể truy cập từ bất kỳ đâu", "Chỉ truy cập được bên trong lớp hoặc qua name mangling", "Là biến công khai (public)"],
+        "answer": "Chỉ truy cập được bên trong lớp hoặc qua name mangling"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "class A:\n    def __init__(self):\n        self.__x__ = 20\n\na = A()\nprint(a.__x__)",
+        "options": ["20", "Lỗi chương trình", "Không in ra gì", "None"],
+        "answer": "20"
+    },
+    {
+        "q": "Ý nghĩa của __init__ trong lớp là gì?",
+        "code": "",
+        "options": ["Phương thức khởi tạo", "Biến riêng tư", "Phương thức bảo vệ", "Không có ý nghĩa đặc biệt"],
+        "answer": "Phương thức khởi tạo"
+    }
+]

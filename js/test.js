@@ -12,6 +12,25 @@
         appId: "1:561600227551:web:28002a8b937f785834e16a"
     };
 
+    document.addEventListener("DOMContentLoaded", () => {
+      // Chặn copy, paste, cut trên toàn trang
+      document.addEventListener("copy", (e) => {
+        e.preventDefault();
+        alert("Vui lòng không sao chép nội dung!");
+      });
+
+      document.addEventListener("paste", (e) => {
+        e.preventDefault();
+        alert("Vui lòng k dán nội dung!");
+      });
+
+      document.addEventListener("cut", (e) => {
+        e.preventDefault();
+        alert("Không được cắt nội dung!");
+      });
+    });
+
+
     // Khởi tạo Firebase
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
