@@ -1,0 +1,62 @@
+[
+    {
+        "title": "1. Tìm Hai Số Có Tổng Bằng Target",
+        "description": "Cho một danh sách các số nguyên `nums` và một số nguyên `target`, hãy tìm <b>chỉ số</b> của hai phần tử trong danh sách sao cho tổng của chúng bằng `target`. <br>Đảm bảo luôn tồn tại một cặp duy nhất. Trả về kết quả là danh sách gồm 2 chỉ số.",
+        "function": "def two_sum(nums: list[int], target: int) -> list[int]:",
+        "example": "# Input: nums = [2, 7, 11, 15], target = 9<br># Output: [0, 1]"
+    },
+    {
+        "title": "2. Kiểm Tra Số Palindrome",
+        "description": "Viết một hàm kiểm tra một số nguyên `n` có phải là số đối xứng không (palindrome). <br>Một số đối xứng là số mà khi đảo ngược các chữ số vẫn giống chính nó (ví dụ: 121 là palindrome, 123 thì không).",
+        "function": "def is_palindrome(n: int) -> bool:",
+        "example": "# Input: n = 121<br># Output: True"
+    },
+    {
+        "title": "3. Fizz Buzz",
+        "description": "Viết hàm nhận vào số nguyên `n`. Trả về danh sách từ 1 đến n với quy tắc:<br>- Nếu số chia hết cho 3: thay bằng 'Fizz'<br>- Nếu chia hết cho 5: thay bằng 'Buzz'<br>- Nếu chia hết cho cả 3 và 5: thay bằng 'FizzBuzz'<br>- Các số còn lại: giữ nguyên (dạng chuỗi)",
+        "function": "def fizz_buzz(n: int) -> list[str]:",
+        "example": "# Input: n = 5<br># Output: ['1', '2', 'Fizz', '4', 'Buzz']"
+    },
+    {
+        "title": "4. Câu Có Nhiều Từ Nhất",
+        "description": "Cho danh sách các câu (chuỗi), mỗi câu gồm các từ phân cách bởi dấu cách. <br>Viết hàm trả về số lượng từ lớn nhất có trong một câu bất kỳ trong danh sách đó.",
+        "function": "def most_words_found(sentences: list[str]) -> int:",
+        "example": "# Input: [\"I love Python\", \"Python is great\"]<br># Output: 3"
+    },
+    {
+        "title": "5. Tổng Tích Lũy Mảng 1D",
+        "description": "Cho một danh sách các số nguyên `nums`. <br>Trả về danh sách mới trong đó phần tử thứ i là tổng của các phần tử từ 0 đến i trong `nums`. (Tổng tích lũy từ đầu đến vị trí hiện tại.)",
+        "function": "def running_sum(nums: list[int]) -> list[int]:",
+        "example": "# Input: [1, 2, 3, 4]<br># Output: [1, 3, 6, 10]"
+    },
+    {
+        "title": "6. Khách Hàng Giàu Nhất",
+        "description": "Cho một ma trận `accounts`, trong đó mỗi dòng là tài khoản của một khách hàng ở nhiều ngân hàng. <br>Mỗi phần tử là số tiền trong một ngân hàng. Tính tổng tài sản của mỗi khách hàng và trả về tài sản lớn nhất trong số đó.",
+        "function": "def maximum_wealth(accounts: list[list[int]]) -> int:",
+        "example": "# Input: [[1,2,3], [3,2,1]]<br># Output: 6"
+    },
+    {
+        "title": "7. Trộn Mảng",
+        "description": "Cho mảng `nums` gồm 2n phần tử dưới dạng [x1,x2,...,xn,y1,y2,...,yn]. <br>Trả về mảng mới theo định dạng: [x1,y1,x2,y2,...,xn,yn].",
+        "function": "def shuffle(nums: list[int], n: int) -> list[int]:",
+        "example": "# Input: nums = [2,5,1,3,4,7], n = 3<br># Output: [2,3,5,4,1,7]"
+    },
+    {
+        "title": "8. Trẻ Có Nhiều Kẹo Nhất",
+        "description": "Cho danh sách `candies` biểu thị số kẹo mỗi trẻ đang có và một số nguyên `extra_candies`. <br>Với mỗi trẻ, kiểm tra xem nếu cho thêm `extra_candies` thì trẻ đó có nhiều kẹo nhất hay không. <br>Trả về danh sách boolean ứng với từng trẻ.",
+        "function": "def kids_with_candies(candies: list[int], extra_candies: int) -> list[bool]:",
+        "example": "# Input: candies = [2,3,5,1,3], extra_candies = 3<br># Output: [True, True, True, False, True]"
+    },
+    {
+        "title": "9. Giảm Số Về 0",
+        "description": "Viết hàm nhận vào số nguyên `n`. Thực hiện các bước sau cho đến khi n = 0:<br>- Nếu n chẵn thì chia đôi (n = n // 2)<br>- Nếu n lẻ thì trừ đi 1 (n = n - 1)<br>Trả về số bước cần thiết để đưa n về 0.",
+        "function": "def number_of_steps(n: int) -> int:",
+        "example": "# Input: n = 14<br># Output: 6"
+    },
+    {
+        "title": "10. Chuyển IP Thành Dạng An Toàn",
+        "description": "Viết một hàm nhận vào chuỗi `ip` biểu diễn địa chỉ IP (vd: '1.1.1.1'). <br>Trả về chuỗi mới trong đó mỗi dấu '.' được thay bằng '[.]' để tránh lỗi bảo mật khi xử lý văn bản đầu vào.",
+        "function": "def defang_ip(ip: str) -> str:",
+        "example": "# Input: \"1.1.1.1\"<br># Output: \"1[.]1[.]1[.]1\""
+    }
+]

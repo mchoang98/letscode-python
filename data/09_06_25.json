@@ -1,0 +1,32 @@
+[
+  {
+    "title": "1. Thống kê điểm kiểm tra học sinh",
+    "description": "Cho một danh sách các điểm kiểm tra của học sinh trong một lớp. Hãy viết chương trình để tính:<br><ul><li><b>Tổng điểm</b> của cả lớp.</li><li><b>Số học sinh đạt điểm từ 5 trở lên</b> (điểm đỗ).</li><li><b>Trung bình điểm</b> của các học sinh đạt điểm từ 5 trở lên.</li><li><b>Vị trí (chỉ số)</b> của học sinh có điểm cao nhất và điểm cao nhì (giả định không có điểm trùng nhau cho hai vị trí này).</li></ul>",
+    "function": "def analyze_student_scores(scores: list[float]) -> dict:",
+    "example": "Input: scores = [7.5, 8.0, 4.5, 9.0, 6.0, 5.0, 3.0]<br>Output:<br>{<br>  \"total_score\": 43.0,<br>  \"passed_students\": 5,<br>  \"average_passed_score\": 7.1,<br>  \"highest_score_index\": 3,<br>  \"second_highest_score_index\": 1<br>}"
+  },
+  {
+    "title": "2. Phân tích chi tiêu hàng ngày",
+    "description": "Cho một danh sách các khoản chi tiêu hàng ngày trong một tháng. Các giá trị dương là chi tiêu, giá trị âm là khoản hoàn tiền.<br>Hãy viết chương trình để:<br><ul><li>Tính <b>tổng chi tiêu thực</b> (tổng các giá trị dương và âm).</li><li>Tìm <b>ngày đầu tiên</b> (chỉ số) có khoản hoàn tiền (giá trị âm). Nếu không có, trả về -1.</li><li>Tìm <b>ngày cuối cùng</b> (chỉ số) có khoản chi tiêu (giá trị dương). Nếu không có, trả về -1.</li><li>Tìm <b>chuỗi ngày chi tiêu liên tục dài nhất</b> (các ngày có chi tiêu > 0). Trả về độ dài của chuỗi này.</li></ul>",
+    "function": "def analyze_daily_expenses(expenses: list[float]) -> dict:",
+    "example": "Input: expenses = [100.0, 50.0, -20.0, 30.0, 0.0, 70.0, 120.0, -10.0, 40.0]<br>Output:<br>{<br>  \"total_net_expense\": 380.0,<br>  \"first_refund_day_index\": 2,<br>  \"last_expense_day_index\": 8,<br>  \"longest_consecutive_expense_days\": 3<br>}"
+  },
+  {
+    "title": "3. Giám sát nhiệt độ mỗi giờ trong ngày",
+    "description": "Cho một danh sách các nhiệt độ được ghi nhận theo từng giờ trong một ngày.<br>Hãy viết chương trình để:<br><ul><li>Tìm <b>nhiệt độ cao nhất</b> và <b>nhiệt độ thấp nhất</b>.</li><li>Tìm <b>khoảng thời gian nhiệt độ tăng liên tiếp dài nhất</b> (số lượng giờ tăng liên tiếp).</li><li>Đếm <b>số lần nhiệt độ dao động tăng – giảm liên tục</b> (đan dấu: tăng rồi giảm, hoặc giảm rồi tăng).</li></ul>",
+    "function": "def monitor_hourly_temperatures(temperatures: list[float]) -> dict:",
+    "example": "Input: temperatures = [25.0, 26.5, 27.0, 26.0, 25.5, 26.0, 27.5, 28.0, 27.0]<br>Output:<br>{<br>  \"max_temp\": 28.0,<br>  \"min_temp\": 25.0,<br>  \"longest_increasing_period\": 3,<br>  \"alternating_fluctuations\": 2<br>}"
+  },
+  {
+    "title": "4. Quản lý kho hàng",
+    "description": "Cho một danh sách số lượng hàng tồn kho mỗi ngày trong tuần.<br>Hãy viết chương trình để:<br><ul><li>Tìm các <b>ngày (chỉ số) có số lượng hàng tồn kho bằng 0</b>.</li><li>Tính <b>số ngày có tồn kho tăng liên tục</b>.</li><li>Thực hiện các thao tác chèn:<br>  <ul><li>Chèn một giá trị `new_item_start` vào <b>đầu danh sách</b>.</li><li>Chèn một giá trị `new_item_middle` vào <b>giữa danh sách</b> (làm tròn xuống nếu tổng số phần tử là số lẻ).</li><li>Chèn một giá trị `new_item_end` vào <b>cuối danh sách</b>.</li></ul></li></ul>",
+    "function": "def manage_inventory(inventory: list[int], new_item_start: int, new_item_middle: int, new_item_end: int) -> dict:",
+    "example": "Input: inventory = [10, 0, 5, 12, 0, 8, 15], new_item_start = 20, new_item_middle = 25, new_item_end = 30<br>Output:<br>{<br>  \"zero_inventory_days_indices\": [1, 4],<br>  \"consecutive_increasing_days\": 2,<br>  \"updated_inventory\": [20, 10, 0, 5, 25, 12, 0, 8, 15, 30]<br>}"
+  },
+  {
+    "title": "5. Phân tích số lượt người truy cập website",
+    "description": "Cho một danh sách số lượt truy cập website mỗi ngày.<br>Hãy viết chương trình để:<br><ul><li>Tìm <b>đoạn ngày có lượt truy cập dương liên tiếp dài nhất</b> (số ngày).</li><li>Tìm <b>đoạn ngày có tổng lượt truy cập cao nhất</b>. Trả về tổng cao nhất và chỉ số bắt đầu/kết thúc của đoạn đó. Nếu có nhiều đoạn cùng tổng cao nhất, trả về tất cả.</li><li><b>In ra các đoạn ngày đó</b> (ví dụ: '[Ngày 1, Ngày 2, Ngày 3]' nếu có nhiều đoạn cùng tổng).</li></ul>",
+    "function": "def analyze_website_traffic(traffic_data: list[int]) -> dict:",
+    "example": "Input: traffic_data = [100, 150, 0, 200, 250, 300, 50, 0, 120, 180]<br>Output:<br>{<br>  \"longest_positive_streak\": 3,<br>  \"highest_total_period\": 800,<br>  \"highest_total_periods_indices\": [[3, 5]],<br>  \"highest_total_periods_values\": [[200, 250, 300]]<br>}"
+  }
+]
