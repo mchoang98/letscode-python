@@ -18,6 +18,10 @@
       {
         "source": "/test",
         "destination": "/test.html"
+      },
+      {
+        "source": "/admin",
+        "destination": "/admin.html"
       }
     ]
   }

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Quản lý Bài Tập</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- jQuery & DataTables -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <!-- Toastify CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+
+<body class="bg-gray-100 p-4 sm:p-6">
+
+  <div class="max-w-7xl mx-auto bg-white p-6 rounded-xl shadow-md">
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+      <h1 class="text-xl sm:text-2xl font-bold text-blue-700">List exercise</h1>
+      <button id="addBtn" class="mt-2 sm:mt-0 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
+        Add
+      </button>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table id="problemsTable" class="display w-full text-sm">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tiêu đề</th>
+            <th>Hàm</th>
+            <th>Mô tả</th>
+            <th>Tham số</th>
+            <th>Kiểm thử</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white w-full max-w-3xl p-6 rounded-lg shadow-lg overflow-y-auto max-h-[90vh]">
+      <h2 class="text-lg font-semibold mb-4">Thêm / Chỉnh sửa Bài Tập</h2>
+      <form id="editForm" class="space-y-4">
+        <div>
+          <label class="font-medium">ID</label>
+          <input type="text" id="editId" class="w-full border p-2 rounded" placeholder="Ví dụ: 01" />
+        </div>
+        <div>
+          <label class="font-medium">Tiêu đề</label>
+          <input type="text" id="editTitle" class="w-full border p-2 rounded"
+            placeholder="Ví dụ: 1. Tìm Hai Số Có Tổng Bằng Target" />
+        </div>
+        <div>
+          <label class="font-medium">Hàm</label>
+          <textarea id="editFunction" class="w-full border p-2 rounded" rows="2"
+            placeholder="def two_sum(nums: list[int], target: int) -> list[int]:"></textarea>
+        </div>
+        <div>
+          <label class="font-medium">Mô tả</label>
+          <textarea id="editDescription" class="w-full border p-2 rounded" rows="3"
+            placeholder="Cho một danh sách các số nguyên nums và một số nguyên target. Tìm hai chỉ số i, j sao cho nums[i] + nums[j] == target."></textarea>
+        </div>
+        <div>
+          <label class="font-medium">Params (JSON)</label>
+          <textarea id="editParams" class="w-full border p-2 rounded" rows="2"
+            placeholder='["nums: list[int]", "target: int"]'></textarea>
+        </div>
+        <div>
+          <label class="font-medium">Tests (JSON)</label>
+          <textarea id="editTests" class="w-full border p-2 rounded" rows="3" placeholder='[
+  { "input": [[2, 7, 11, 15], 9], "expected": [0, 1] },
+  { "input": [[3, 2, 4], 6], "expected": [1, 2] },
+  { "input": [[3, 3], 6], "expected": [0, 1] }
+]'></textarea>
+        </div>
+        <div class="flex justify-end space-x-2 pt-2">
+          <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded">Hủy</button>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCvBcYEiOvMvwUy019dTfZgsRE6m6sXUHo",
+      authDomain: "letscode-python.firebaseapp.com",
+      databaseURL: "https://letscode-python-default-rtdb.firebaseio.com",
+      projectId: "letscode-python",
+      storageBucket: "letscode-python.appspot.com",
+      messagingSenderId: "561600227551",
+      appId: "1:561600227551:web:28002a8b937f785834e16a"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const problemsRef = firebase.database().ref("basic_problems");
+
+    // Modal control
+    function openModal() {
+      $('#modal').removeClass('hidden');
+    }
+    function closeModal() {
+      $('#modal').addClass('hidden');
+    }
+
+    function showToast(message, type = "success") {
+      Toastify({
+        text: message,
+        duration: 3000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: type === "error" ? "#EF4444" : "#10B981", // đỏ hoặc xanh
+        stopOnFocus: true,
+      }).showToast();
+    }
+
+
+// Khởi tạo bảng
+const table = $('#problemsTable').DataTable();
+
+// Load dữ liệu bảng
+problemsRef.on("value", (snapshot) => {
+  const data = snapshot.val();
+  const problems = data?.problems || {};
+  table.clear();
+
+  for (const key in problems) {
+    const p = problems[key];
+    const idStr = String(key); // Giữ đúng định dạng ID gốc
+
+    // Render đẹp hơn cho phần kiểm thử
+    const testHtml = (p.tests || []).map((t, i) =>
+      `<div class="bg-gray-100 rounded px-2 py-1 mb-1 text-xs leading-snug">
+        <div><span class="font-semibold">▶ Test ${i + 1}</span></div>
+        <div><span class="text-gray-600">Input:</span> ${JSON.stringify(t.input)}</div>
+        <div><span class="text-gray-600">Expected:</span> ${JSON.stringify(t.expected)}</div>
+      </div>`
+    ).join("");
+
+    table.row.add([
+      idStr,
+      p.title || '',
+      `<pre class="whitespace-pre-wrap">${p.function || ''}</pre>`,
+      `<pre class="whitespace-pre-wrap">${p.description || ''}</pre>`,
+      `<pre class="whitespace-pre-wrap">${JSON.stringify(p.params || [], null, 2)}</pre>`,
+      testHtml,
+      `<div class="flex gap-2">
+        <button class="editBtn bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded" data-id='${idStr}'>Edit</button>
+        <button class="deleteBtn bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded" data-id='${idStr}'>Delete</button>
+      </div>`
+    ]);
+  }
+
+  table.draw();
+});
+
+
+
+    $('#addBtn').on("click", async function () {
+      try {
+        const snapshot = await problemsRef.child("problems").once("value");
+        const problems = snapshot.val() || {};
+
+        const ids = Object.keys(problems).map(id => parseInt(id)).filter(n => !isNaN(n));
+        const maxId = ids.length > 0 ? Math.max(...ids) : 0;
+        const nextId = String(maxId + 1).padStart(2, '0'); // ví dụ: '01', '02'
+
+        $('#editForm')[0].reset();
+        $('#editId').val(nextId).prop('disabled', true); // không cho sửa ID
+        openModal();
+      } catch (err) {
+        console.error("Lỗi khi tạo ID mới:", err);
+        showToast("❌ Lỗi khi tạo ID mới!", "error");
+      }
+    });
+
+
+
+    // Sự kiện nhấn nút Edit
+    $(document).on("click", ".editBtn", async function () {
+      const id = String($(this).data("id"));
+      try {
+        const snapshot = await firebase.database().ref("basic_problems/problems").once("value");
+        const problems = snapshot.val() || {};
+        const problem = problems[id]; // Lấy trực tiếp theo key
+
+        if (!problem) {
+          showToast("❌ Không tìm thấy bài tập.", "error");
+          return;
+        }
+
+        $('#editId').val(id).prop('disabled', true);
+        $('#editTitle').val(problem.title || '');
+        $('#editFunction').val(problem.function || '');
+        $('#editDescription').val(problem.description || '');
+        $('#editParams').val(JSON.stringify(problem.params || [], null, 2));
+        $('#editTests').val(JSON.stringify(problem.tests || [], null, 2));
+
+        openModal();
+      } catch (err) {
+        console.error("Lỗi khi lấy bài tập:", err);
+        showToast("❌ Lỗi khi truy cập dữ liệu.", "error");
+      }
+    });
+
+    $(document).on("click", ".deleteBtn", function () {
+      const id = String($(this).data("id"));
+      if (confirm(`Bạn có chắc muốn xóa bài tập "${id}"?`)) {
+        firebase.database().ref("basic_problems/problems/" + id).remove()
+          .then(() => showToast("✅ Xóa thành công"))
+          .catch((err) => {
+            console.error("Lỗi khi xóa:", err);
+            showToast("❌ Lỗi khi xóa!", "error");
+          });
+      }
+    });
+
+
+
+    // Lưu bài tập
+    $('#editForm').submit(function (e) {
+      e.preventDefault();
+
+      try {
+        const id = String($('#editId').val().trim()); // Ép chuỗi
+        const problem = {
+          id,
+          title: $('#editTitle').val(),
+          function: $('#editFunction').val(),
+          description: $('#editDescription').val(),
+          params: JSON.parse($('#editParams').val() || "[]"),
+          tests: JSON.parse($('#editTests').val() || "[]")
+        };
+
+        firebase.database().ref("basic_problems/problems/" + id).set(problem, err => {
+          if (!err) {
+            showToast("✅ Lưu thành công!", "success");
+            closeModal();
+          } else {
+            showToast("❌ Lỗi khi lưu!", "error");
+            console.error(err);
+          }
+        });
+      } catch (err) {
+        showToast("❌ Dữ liệu không hợp lệ (params/tests phải là JSON hợp lệ).", "error");
+        console.error("Lỗi khi phân tích JSON:", err);
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>
