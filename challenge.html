@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Practice Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@latest/min/vs/loader.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #editor {
+            height: 400px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .monaco-editor {
+            border: 1px solid #4b5563;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200 min-h-screen flex flex-col items-center px-4 py-6">
+
+    <h1 id="pageTitle" class="text-3xl font-bold mb-6">Python Practice Challenge</h1>
+
+    <div class="w-full max-w-5xl space-y-4">
+        <!-- Chọn bài tập -->
+        <div class="mb-4">
+            <label for="problemSelect" class="block text-lg font-medium mb-1">Chọn bài tập:</label>
+            <select id="problemSelect" class="bg-gray-800 border border-gray-600 text-white rounded-md px-3 py-2">
+                <option value="">-- Chọn một bài --</option>
+            </select>
+        </div>
+
+        <label id="funcLabel" class="block text-lg font-medium mb-1">Nhập hàm <code>...</code> vào đây:</label>
+        <p id="funcDescription" class="text-gray-400 mb-4 italic"></p>
+
+        <!-- Monaco Editor -->
+        <div id="editor" class="rounded-md"></div>
+
+        <div class="mb-4 flex gap-4">
+            <!-- Run Button -->
+            <button id="runBtn"
+                class="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-5 py-2.5 rounded-xl text-white font-semibold shadow-md transition duration-200 ease-in-out">
+                 <span>Chạy Pytest</span>
+            </button>
+
+            <!-- Submit Button -->
+            <button id="submitBtn"
+                class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 px-5 py-2.5 rounded-xl text-white font-semibold shadow-md transition duration-200 ease-in-out">
+                 <span>Nộp Bài</span>
+            </button>
+        </div>
+
+
+
+        <!-- Kết quả -->
+        <div class="mt-6">
+            <h2 class="text-xl font-semibold mb-2">Kết quả:</h2>
+            <pre id="output"
+                class="bg-[#1e1e1e] text-green-300 p-4 rounded-md border border-gray-600 whitespace-pre-wrap overflow-x-auto"></pre>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let editor;
+        let currentProblemId = null;
+
+        const host_url = "http://localhost:5000";
+        // Load danh sách bài tập
+        async function loadProblemList() {
+            const select = document.getElementById("problemSelect");
+            try {
+                const res = await fetch(`${host_url}/list_problems`);
+                const data = await res.json();
+                data.forEach(p => {
+                    const opt = document.createElement('option');
+                    opt.value = p.id;
+                    opt.textContent = p.title;
+                    select.appendChild(opt);
+                });
+
+                select.addEventListener('change', e => {
+                    currentProblemId = e.target.value;
+                    loadFunctionInfo(currentProblemId);
+                });
+            } catch (e) {
+                console.error("Lỗi tải danh sách bài:", e);
+            }
+        }
+
+        // Load thông tin bài
+        async function loadFunctionInfo(problemId) {
+            if (!problemId) return;
+            try {
+                const res = await fetch(`${host_url}/get_problem`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id: problemId })
+                });
+                const data = await res.json();
+                if (data.error) throw new Error(data.error);
+
+                const funcName = data.function || '...';
+                const description = data.description || '';
+                document.getElementById('funcLabel').innerHTML = `Nhập hàm <code>${funcName}</code> vào đây:`;
+                document.getElementById('funcDescription').innerHTML = description;
+                document.getElementById('pageTitle').textContent = `Python Practice  - Hàm: ${funcName}`;
+
+                editor.setValue(`${funcName} # Không xóa dòng này\n    # Nhập code dưới đây...\n`);
+            } catch (e) {
+                console.error(e);
+                alert("❌ Không tải được bài tập.");
+            }
+        }
+
+        // Gửi code kiểm thử
+        document.getElementById("runBtn").addEventListener("click", async () => {
+            const code = editor.getValue();
+            const outputEl = document.getElementById("output");
+
+            if (!code.trim()) {
+                outputEl.textContent = '⚠️ Vui lòng nhập code.';
+                return;
+            }
+
+            if (!currentProblemId) {
+                outputEl.textContent = '⚠️ Vui lòng chọn một bài tập.';
+                return;
+            }
+
+            outputEl.textContent = '⏳ Đang chạy...';
+
+            try {
+                const response = await fetch(`${host_url}/run_pytest`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ code, id: currentProblemId })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    outputEl.textContent = '❌ Lỗi: ' + data.error;
+                } else {
+                    outputEl.textContent =
+                        `🔁 Return code: ${data.returncode}\n\n📤 STDOUT:\n${data.stdout}\n\n📥 STDERR:\n${data.stderr}`;
+                }
+            } catch (err) {
+                outputEl.textContent = '🚫 Lỗi khi gọi server: ' + err.message;
+            }
+        });
+
+
+        document.getElementById("submitBtn").addEventListener("click", async () => {
+            const code = editor.getValue();
+            const outputEl = document.getElementById("output");
+
+            if (!code.trim()) {
+                outputEl.textContent = '⚠️ Vui lòng nhập code.';
+                return;
+            }
+
+            if (!currentProblemId) {
+                outputEl.textContent = '⚠️ Vui lòng chọn một bài tập.';
+                return;
+            }
+
+            // 👉 Hỏi tên học sinh
+            const student = prompt("📛 Nhập tên của bạn để nộp bài:");
+            if (!student || student.trim() === "") {
+                outputEl.textContent = '⚠️ Bạn chưa nhập tên, không thể nộp bài.';
+                return;
+            }
+
+            outputEl.textContent = "⏳ Đang nộp bài...";
+
+            try {
+                const res = await fetch(`${host_url}/submit_solution`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        id: currentProblemId,
+                        code: code,
+                        student: student.trim()
+                    })
+                });
+
+                const result = await res.json();
+
+                if (result.success) {
+                    outputEl.textContent = `✅ ${student.trim()}, bạn đã nộp bài thành công!`;
+                } else {
+                    outputEl.textContent = "❌ Lỗi khi nộp bài: " + (result.error || result.message);
+                }
+            } catch (e) {
+                outputEl.textContent = "🚫 Lỗi khi gọi server: " + e.message;
+            }
+        });
+
+        // Khởi tạo Monaco và load danh sách bài
+        require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@latest/min/vs' } });
+        require(["vs/editor/editor.main"], function () {
+            editor = monaco.editor.create(document.getElementById('editor'), {
+                value: '',
+                language: 'python',
+                theme: 'vs-dark',
+                fontSize: 16,
+                lineNumbers: 'on',
+                automaticLayout: true
+            });
+            loadProblemList();
+        });
+    </script>
+</body>
+
+</html>
