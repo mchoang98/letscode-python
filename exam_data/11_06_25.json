@@ -1,0 +1,62 @@
+[
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 7\nif x % 2 == 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")",
+        "options": ["Even", "Odd", "Error", "None"],
+        "answer": "Odd"
+    },
+    {
+        "q": "Kết quả in ra của đoạn code sau là gì?",
+        "code": "a = 10\nb = 20\nif a > b:\n    print(\"A lớn hơn B\")\nelse:\n    print(\"B lớn hơn hoặc bằng A\")",
+        "options": ["A lớn hơn B", "B lớn hơn hoặc bằng A", "Error", "Không có gì in ra"],
+        "answer": "B lớn hơn hoặc bằng A"
+    },
+    {
+        "q": "Chương trình sau in ra gì nếu input là 2024?",
+        "code": "year = 2024\nif (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:\n    print(\"Leap year\")\nelse:\n    print(\"Not a leap year\")",
+        "options": ["Leap year", "Not a leap year", "Error", "None"],
+        "answer": "Leap year"
+    },
+    {
+        "q": "Kết quả in ra là gì?",
+        "code": "n = 0\nif n:\n    print(\"True\")\nelse:\n    print(\"False\")",
+        "options": ["True", "False", "Error", "None"],
+        "answer": "False"
+    },
+    {
+        "q": "Kết quả in ra là gì?",
+        "code": "x = -5\nif x > 0:\n    print(\"Positive\")\nelif x < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+        "options": ["Positive", "Negative", "Zero", "Error"],
+        "answer": "Negative"
+    },
+    {
+        "q": "Chương trình in gì với a = 4, b = 0, op = '/'?",
+        "code": "a = 4\nb = 0\nop = '/'\nif op == '+':\n    print(a + b)\nelif op == '-':\n    print(a - b)\nelif op == '*':\n    print(a * b)\nelif op == '/':\n    if b != 0:\n        print(a / b)\n    else:\n        print(\"Error\")",
+        "options": ["Error", "0", "4", "Không có gì in ra"],
+        "answer": "Error"
+    },
+    {
+        "q": "Kết quả in ra là gì?",
+        "code": "score = 7.5\nif score >= 8:\n    print(\"Giỏi\")\nelif score >= 6.5:\n    print(\"Khá\")\nelif score >= 5:\n    print(\"Trung bình\")\nelse:\n    print(\"Yếu\")",
+        "options": ["Giỏi", "Khá", "Trung bình", "Yếu"],
+        "answer": "Khá"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "x = 15\nif x % 3 == 0 and x % 5 == 0:\n    print(\"Chia hết cho cả 3 và 5\")\nelif x % 3 == 0:\n    print(\"Chia hết cho 3\")\nelif x % 5 == 0:\n    print(\"Chia hết cho 5\")\nelse:\n    print(\"Không chia hết cho 3 và 5\")",
+        "options": ["Chia hết cho 3", "Chia hết cho 5", "Chia hết cho cả 3 và 5", "Không chia hết cho 3 và 5"],
+        "answer": "Chia hết cho cả 3 và 5"
+    },
+    {
+        "q": "Kết quả là gì nếu a = b = c = 7?",
+        "code": "a, b, c = 7, 7, 7\nif a >= b and a >= c:\n    print(a)\nelif b >= c:\n    print(b)\nelse:\n    print(c)",
+        "options": ["7", "7\n7", "Không in gì", "Error"],
+        "answer": "7"
+    },
+    {
+        "q": "Chương trình in ra gì?",
+        "code": "num = 10\nif num > 5:\n    if num < 20:\n        print(\"Trong khoảng\")\n    else:\n        print(\"Lớn hơn 20\")\nelse:\n    print(\"Nhỏ hơn hoặc bằng 5\")",
+        "options": ["Trong khoảng", "Lớn hơn 20", "Nhỏ hơn hoặc bằng 5", "Không có gì in ra"],
+        "answer": "Trong khoảng"
+    }
+]
