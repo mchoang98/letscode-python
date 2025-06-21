@@ -1,0 +1,50 @@
+[
+  {
+    "title": "1. Kiểm tra điều kiện vào học lớp 10",
+    "description": "Viết chương trình nhập tuổi của học sinh và kiểm tra xem học sinh đó có đủ điều kiện vào lớp 10 hay không (đủ điều kiện nếu từ 15 tuổi trở lên).",
+    "function": "def is_eligible_for_grade_10(age: int) -> bool:",
+    "example": "Input: age = 14<br>Output: False<br>Input: age = 15<br>Output: True"
+  },
+  {
+    "title": "2. So sánh số nguyên với 100",
+    "description": "Nhập một số nguyên từ bàn phím và kiểm tra xem số đó lớn hơn, nhỏ hơn, hay bằng 100.",
+    "function": "def compare_with_100(number: int) -> str:",
+    "example": "Input: number = 120<br>Output: \"Lớn hơn 100\"<br>Input: number = 100<br>Output: \"Bằng 100\""
+  },
+  {
+    "title": "3. Tìm số lớn nhất trong 3 số nguyên",
+    "description": "Nhập vào 3 số nguyên và trả về giá trị lớn nhất trong 3 số đó.",
+    "function": "def find_max_of_three(a: int, b: int, c: int) -> int:",
+    "example": "Input: a = 5, b = 9, c = 3<br>Output: 9"
+  },
+  {
+    "title": "4. Xếp loại học lực học sinh",
+    "description": "Cho điểm kiểm tra, điểm giữa kỳ, và điểm cuối kỳ. Tính điểm trung bình và xếp loại:<br><ul><li>Giỏi: >=8.0</li><li>Khá: >=6.5</li><li>Trung bình: >=5.0</li><li>Yếu: <5.0</li></ul>",
+    "function": "def classify_student(quiz: float, midterm: float, final: float) -> str:",
+    "example": "Input: quiz = 7.0, midterm = 8.0, final = 9.0<br>Output: \"Giỏi\""
+  },
+  {
+    "title": "5. Giải phương trình bậc hai",
+    "description": "Giải phương trình bậc hai ax² + bx + c = 0 với a ≠ 0. Trả về nghiệm hoặc thông báo không có nghiệm thực.",
+    "function": "def solve_quadratic(a: float, b: float, c: float) -> dict:",
+    "example": "Input: a = 1, b = -3, c = 2<br>Output: {\"x1\": 2.0, \"x2\": 1.0}"
+  },
+  {
+    "title": "6. Tính hoa hồng đại lý",
+    "description": "Tùy theo mức doanh số, tính phần trăm hoa hồng:<br><ul><li><b>< 100 triệu</b>: 5%</li><li><b>100-300 triệu</b>: 10%</li><li><b>> 300 triệu</b>: 20%</li></ul>",
+    "function": "def calculate_commission(sales: float) -> float:",
+    "example": "Input: sales = 250_000_000<br>Output: 25_000_000.0"
+  },
+  {
+    "title": "7. Tính cước điện thoại bàn",
+    "description": "Cước điện thoại gồm phí thuê bao cố định là 25.000đ/tháng. Phí gọi:<br><ul><li><b>50 phút đầu</b>: 600đ/phút</li><li><b>50 phút tiếp theo</b>: 400đ/phút</li><li><b>Trên 100 phút</b>: 200đ/phút</li></ul>",
+    "function": "def calculate_phone_bill(minutes: int) -> int:",
+    "example": "Input: minutes = 120<br>Output: 25000 + (50×600) + (50×400) + (20×200) = 25000 + 30000 + 20000 + 4000 = 79000"
+  },
+  {
+    "title": "8. Tính thuế thu nhập và lương ròng",
+    "description": "Nhập lương nhân viên, tính thuế (theo mức lương) và lương thực nhận:<br><ul><li><b><= 5 triệu</b>: 5%</li><li><b>5-10 triệu</b>: 10%</li><li><b>> 10 triệu</b>: 20%</li></ul>",
+    "function": "def calculate_salary_and_tax(income: float) -> dict:",
+    "example": "Input: income = 12_000_000<br>Output: {\"tax\": 2_400_000.0, \"net_salary\": 9_600_000.0}"
+  }
+]
