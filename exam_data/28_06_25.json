@@ -1,0 +1,112 @@
+[
+  {
+    "q": "Kế thừa (Inheritance) là gì trong lập trình hướng đối tượng?",
+    "code": "",
+    "options": [
+      "Một kỹ thuật cho phép tạo ra nhiều đối tượng từ một lớp duy nhất.",
+      "Một tính chất cốt lõi cho phép tạo lớp mới (subclass) dựa trên lớp đã có (superclass), kế thừa thuộc tính và phương thức của lớp cha.",
+      "Một cách để ẩn đi các chi tiết triển khai của một lớp.",
+      "Một phương pháp để kết hợp nhiều lớp thành một lớp lớn hơn."
+    ],
+    "answer": "Một tính chất cốt lõi cho phép tạo lớp mới (subclass) dựa trên lớp đã có (superclass), kế thừa thuộc tính và phương thức của lớp cha."
+  },
+  {
+    "q": "Lợi ích chính của kế thừa là gì?",
+    "code": "",
+    "options": [
+      "Tăng cường bảo mật mã nguồn.",
+      "Hạn chế khả năng mở rộng hệ thống.",
+      "Tái sử dụng mã nguồn, giảm trùng lặp, tiết kiệm thời gian, dễ bảo trì và dễ mở rộng hệ thống.",
+      "Giảm thiểu số lượng lớp cần thiết trong một ứng dụng."
+    ],
+    "answer": "Tái sử dụng mã nguồn, giảm trùng lặp, tiết kiệm thời gian, dễ bảo trì và dễ mở rộng hệ thống."
+  },
+  {
+    "q": "Trong ví dụ về phần mềm quản lý trường đại học, tại sao nên tạo một class `Person` làm lớp cha cho `Sinh viên`, `Giảng viên`, `Nhân viên`?",
+    "code": "",
+    "options": [
+      "Để giới hạn số lượng thuộc tính chung.",
+      "Để đảm bảo mỗi loại người dùng có các phương thức khác nhau.",
+      "Để tránh trùng lặp mã (code) cho các thuộc tính chung như mã số, họ tên, địa chỉ.",
+      "Để bắt buộc tất cả các lớp con phải có cùng hành vi."
+    ],
+    "answer": "Để tránh trùng lặp mã (code) cho các thuộc tính chung như mã số, họ tên, địa chỉ."
+  },
+  {
+    "q": "Để gọi hàm khởi tạo (`__init__`) của lớp cha trong một lớp con trong Python, chúng ta sử dụng cú pháp nào?",
+    "code": "",
+    "options": [
+      "ParentClass.__init__(self, ...)",
+      "self.__init__(...)", 
+      "ChildClass.__init__(self, ...)",
+      "super().__init__(...)"
+    ],
+    "answer": "super().__init__(...)"
+  },
+  {
+    "q": "Thuật ngữ nào mô tả việc một lớp con định nghĩa lại một phương thức đã có ở lớp cha?",
+    "code": "",
+    "options": [
+      "Kế thừa đa hình.",
+      "Đóng gói.",
+      "Trừu tượng.",
+      "Ghi đè phương thức (Overriding)."
+    ],
+    "answer": "Ghi đè phương thức (Overriding)."
+  },
+  {
+    "q": "Trong Python 3, mọi class ngầm định kế thừa từ lớp nào?",
+    "code": "",
+    "options": [
+      "None",
+      "Base",
+      "Root",
+      "object"
+    ],
+    "answer": "object"
+  },
+  {
+    "q": "Loại kế thừa nào liên quan đến việc một lớp con kế thừa từ nhiều lớp cha?",
+    "code": "",
+    "options": [
+      "Kế thừa đơn (Single Inheritance).",
+      "Kế thừa đa cấp (Multilevel Inheritance).",
+      "Kế thừa phân cấp (Hierarchical Inheritance).",
+      "Kế thừa đa hình (Multiple Inheritance)."
+    ],
+    "answer": "Kế thừa đa hình (Multiple Inheritance)."
+  },
+  {
+    "q": "Khi nào bạn nên sử dụng kế thừa theo khuyến nghị trong nguồn?",
+    "code": "",
+    "options": [
+      "Khi bạn muốn làm cho mã nguồn phức tạp hơn.",
+      "Khi các lớp không có mối quan hệ rõ ràng.",
+      "Khi có quan hệ \"is-a\" (là một) giữa các đối tượng.",
+      "Khi bạn muốn tránh tái sử dụng mã nguồn."
+    ],
+    "answer": "Khi có quan hệ \"is-a\" (là một) giữa các đối tượng."
+  },
+  {
+    "q": "Một lớp trừu tượng (Abstract Class) có đặc điểm gì?",
+    "code": "",
+    "options": [
+      "Không thể tạo đối tượng trực tiếp từ lớp này, chỉ dùng làm khung cho các lớp con kế thừa.",
+      "Bắt buộc phải có tất cả các phương thức được triển khai đầy đủ.",
+      "Chỉ có thể kế thừa từ một lớp cha duy nhất.",
+      "Luôn phải có hàm `__init__` rỗng."
+    ],
+    "answer": "Không thể tạo đối tượng trực tiếp từ lớp này, chỉ dùng làm khung cho các lớp con kế thừa."
+  },
+  {
+    "q": "Trong sơ đồ kế thừa minh họa, `Student` và `Faculty` đều là các lớp con trực tiếp của lớp nào?",
+    "code": "",
+    "options": [
+      "Employee",
+      "EnggStudent",
+      "SalesEmb",
+      "Person"
+    ],
+    "answer": "Person"
+  }
+]
