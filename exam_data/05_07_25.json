@@ -1,0 +1,62 @@
+[
+    {
+        "q": "Điều gì xảy ra khi chạy đoạn code sau?",
+        "code": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    @abstractmethod\n    def speak(self):\n        pass\n\nanimal = Animal()",
+        "options": ["In ra lỗi TypeError", "In ra 'None'", "Chạy bình thường", "In ra 'pass'"],
+        "answer": "In ra lỗi TypeError"
+    },
+    {
+        "q": "Đoạn code sau in ra gì?",
+        "code": "from abc import ABC, abstractmethod\n\nclass PaymentMethod(ABC):\n    @abstractmethod\n    def pay(self):\n        pass\n\nclass PayPal(PaymentMethod):\n    def pay(self):\n        print(\"Paid via PayPal\")\n\np = PayPal()\np.pay()",
+        "options": ["Lỗi vì abstract class", "Không in gì", "Paid via PayPal", "None"],
+        "answer": "Paid via PayPal"
+    },
+    {
+        "q": "Mục đích của từ khóa @abstractmethod trong Python là gì?",
+        "code": "",
+        "options": ["Đánh dấu một method bắt buộc phải override ở subclass", "Chạy method đó đầu tiên", "Tạo static method", "Bỏ qua method đó khi biên dịch"],
+        "answer": "Đánh dấu một method bắt buộc phải override ở subclass"
+    },
+    {
+        "q": "Điều gì xảy ra nếu một class kế thừa abstract class nhưng không override hết các method trừu tượng?",
+        "code": "",
+        "options": ["Chạy bình thường", "Lỗi khi chạy method", "Lỗi khi khởi tạo đối tượng", "Chỉ cảnh báo"],
+        "answer": "Lỗi khi khởi tạo đối tượng"
+    },
+    {
+        "q": "Đoạn code này sẽ in ra gì?",
+        "code": "from abc import ABC, abstractmethod\n\nclass Vehicle(ABC):\n    @abstractmethod\n    def move(self):\n        pass\n\nclass Bike(Vehicle):\n    def move(self):\n        print(\"Pedaling\")\n\nb = Bike()\nb.move()",
+        "options": ["Lỗi vì chưa gọi super()", "Không in gì", "Pedaling", "None"],
+        "answer": "Pedaling"
+    },
+    {
+        "q": "Đoạn code này sẽ báo lỗi vì lý do gì?",
+        "code": "from abc import ABC, abstractmethod\n\nclass Report(ABC):\n    @abstractmethod\n    def export(self):\n        pass\n\nclass ExcelReport(Report):\n    def __init__(self):\n        print(\"Init Excel\")\n\nr = ExcelReport()",
+        "options": ["Không override method export", "Không kế thừa ABC", "Không có constructor", "Sai cú pháp abstractmethod"],
+        "answer": "Không override method export"
+    },
+    {
+        "q": "Lớp nào sau đây là abstract class hợp lệ?",
+        "code": "A. class A(ABC):\n       @abstractmethod\n       def run(self): pass\n\nB. class A():\n       def run(self): pass",
+        "options": ["Chỉ A", "Chỉ B", "Cả hai", "Không có cái nào"],
+        "answer": "Chỉ A"
+    },
+    {
+        "q": "Đoạn code này có hợp lệ không?",
+        "code": "from abc import ABC, abstractmethod\n\nclass A(ABC):\n    def method1(self):\n        print(\"Implemented\")\n\n    @abstractmethod\n    def method2(self):\n        pass",
+        "options": ["Có, vì abstract class có thể chứa method bình thường", "Không, vì abstract class không được có method", "Không, vì thiếu super()", "Lỗi cú pháp"],
+        "answer": "Có, vì abstract class có thể chứa method bình thường"
+    },
+    {
+        "q": "Trong một game, bạn có abstract class 'Character' với method abstract 'attack()'. Bạn có các subclass 'Mage', 'Warrior'... mỗi class override khác nhau. Đây là ví dụ của gì?",
+        "code": "",
+        "options": ["Đa hình động", "Kế thừa nhiều", "Overloading", "Đóng gói dữ liệu"],
+        "answer": "Đa hình động"
+    },
+    {
+        "q": "Đoạn code sau in ra gì?",
+        "code": "from abc import ABC, abstractmethod\n\nclass Tool(ABC):\n    @abstractmethod\n    def use(self):\n        pass\n\nclass Hammer(Tool):\n    def use(self):\n        print(\"Bang bang!\")\n\nTool = Hammer()\nTool.use()",
+        "options": ["Lỗi vì không kế thừa đúng", "Bang bang!", "Lỗi vì gán lại class name", "Không in gì"],
+        "answer": "Bang bang!"
+    }
+]
