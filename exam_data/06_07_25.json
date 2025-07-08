@@ -1,0 +1,62 @@
+[
+    {
+        "q": "Đoạn code sau vi phạm nguyên tắc nào của Clean Code?",
+        "code": "def x(a, b):\n    return a + b",
+        "options": ["Tên hàm không rõ nghĩa", "Hàm quá dài", "Không có comment", "Lặp code quá nhiều"],
+        "answer": "Tên hàm không rõ nghĩa"
+    },
+    {
+        "q": "Kết quả của đoạn code sau là gì?",
+        "code": "def add(x, y):\n    # Tính tổng hai số\n    return x + y\n\nprint(add(2, 3))",
+        "options": ["2", "3", "5", "None"],
+        "answer": "5"
+    },
+    {
+        "q": "Đâu là vấn đề của đoạn code sau nếu xét theo Clean Code?",
+        "code": "def process(a, b):\n    c = a + b\n    d = a - b\n    e = a * b\n    return c + d + e",
+        "options": ["Hàm làm quá nhiều việc", "Không có biến", "Sai cú pháp", "Thiếu vòng lặp"],
+        "answer": "Hàm làm quá nhiều việc"
+    },
+    {
+        "q": "Đâu là cách đặt tên hàm tốt hơn theo Clean Code?",
+        "code": "def do(x, y):\n    return x * y",
+        "options": ["def calculate_area(x, y):", "def aa(x, y):", "def xyz(x, y):", "def calc(x, y):"],
+        "answer": "def calculate_area(x, y):"
+    },
+    {
+        "q": "Code sau đây vi phạm điều gì theo PEP8?",
+        "code": "def hello ():\n    print('Hello')",
+        "options": ["Không có khoảng trắng đúng chuẩn", "Thiếu return", "Dùng print là sai", "Sai tên hàm"],
+        "answer": "Không có khoảng trắng đúng chuẩn"
+    },
+    {
+        "q": "Điều gì là đúng khi nói về đoạn code sau?",
+        "code": "# Tính tổng\nx = a + b  # Cộng a và b\n# In kết quả\nprint(x)",
+        "options": ["Comment không cần thiết, lặp lại logic code", "Code sai logic", "Comment rất cần thiết", "Thiếu định dạng"],
+        "answer": "Comment không cần thiết, lặp lại logic code"
+    },
+    {
+        "q": "Đoạn code nào nên được refactor để tránh lặp code?",
+        "code": "print('Hello')\nprint('Hello')\nprint('Hello')",
+        "options": ["Đúng, nên dùng vòng lặp", "Không cần refactor", "Code ngắn nên giữ nguyên", "Refactor sẽ làm code dài hơn"],
+        "answer": "Đúng, nên dùng vòng lặp"
+    },
+    {
+        "q": "Cách nào viết lại tốt hơn cho đoạn sau?",
+        "code": "def f():\n    return 3.14 * 2 * r",
+        "options": ["def calculate_circumference(r):", "def pi(r):", "def cal(r):", "def x():"],
+        "answer": "def calculate_circumference(r):"
+    },
+    {
+        "q": "Đâu là công cụ giúp kiểm tra định dạng Clean Code trong Python?",
+        "code": "",
+        "options": ["flake8", "numpy", "pandas", "pygame"],
+        "answer": "flake8"
+    },
+    {
+        "q": "Khi viết Clean Code, điều nào sau đây đúng?",
+        "code": "",
+        "options": ["Code dễ đọc quan trọng hơn code ngắn", "Dùng nhiều trick càng tốt", "Comment thay cho việc đặt tên tốt", "Không cần chia nhỏ hàm"],
+        "answer": "Code dễ đọc quan trọng hơn code ngắn"
+    }
+]
