@@ -1,0 +1,122 @@
+[
+  {
+    "q": "Điều gì xảy ra khi chạy đoạn code sau?",
+    "code": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    @abstractmethod\n    def speak(self):\n        pass\n\nanimal = Animal()",
+    "options": ["In ra 'pass'", "In ra 'None'", "Chạy bình thường", "In ra lỗi TypeError"],
+    "answer": "In ra lỗi TypeError"
+  },
+  {
+    "q": "Khái niệm nào mô tả 'đa kế thừa' trong Lập trình hướng đối tượng (OOP)?",
+    "code": null,
+    "options": ["Một phương thức có thể được định nghĩa lại trong lớp con.", "Một lớp có thể kế thừa từ nhiều lớp cơ sở.", "Một đối tượng có thể có nhiều loại dữ liệu.", "Một lớp chỉ có thể kế thừa từ một lớp cơ sở."],
+    "answer": "Một lớp có thể kế thừa từ nhiều lớp cơ sở."
+  },
+  {
+    "q": "Tính đóng gói (Encapsulation) trong OOP đề cập đến điều gì?",
+    "code": null,
+    "options": ["Định nghĩa lại các phương thức trong lớp con.", "Giới hạn quyền truy cập vào các thành viên của đối tượng.", "Tạo các đối tượng từ các lớp.", "Cho phép một lớp kế thừa từ nhiều lớp."],
+    "answer": "Giới hạn quyền truy cập vào các thành viên của đối tượng."
+  },
+  {
+    "q": "Đa hình (Polymorphism) trong OOP có nghĩa là gì?",
+    "code": null,
+    "options": ["Một phương thức có thể chấp nhận nhiều kiểu dữ liệu.", "Một lớp có thể có nhiều phương thức.", "Một đối tượng có thể có nhiều thuộc tính.", "Một đối tượng có thể mang nhiều hình thức."],
+    "answer": "Một đối tượng có thể mang nhiều hình thức."
+  },
+  {
+    "q": "Khi bạn tạo một 'thể hiện' (instance) của một lớp, bạn đang làm gì?",
+    "code": null,
+    "options": ["Gán giá trị cho một thuộc tính.", "Tạo một bản sao của đối tượng.", "Xóa một đối tượng.", "Định nghĩa một lớp mới."],
+    "answer": "Tạo một bản sao của đối tượng."
+  },
+  {
+    "q": "Phương thức đặc biệt nào trong Python được sử dụng làm hàm tạo (constructor) của một lớp?",
+    "code": null,
+    "options": ["`__str__`", "`__del__`", "`__init__`", "`__new__`"],
+    "answer": "`__init__`"
+  },
+  {
+    "q": "Trong OOP, một 'lớp' (Class) được định nghĩa tốt nhất là gì?",
+    "code": null,
+    "options": ["Một biến được khai báo bên trong một đối tượng.", "Một bản thiết kế để tạo ra các đối tượng.", "Một thể hiện cụ thể của một đối tượng.", "Một hàm được định nghĩa bên trong một lớp."],
+    "answer": "Một bản thiết kế để tạo ra các đối tượng."
+  },
+  {
+    "q": "Nguyên tắc OOP nào cho phép một lớp mới kế thừa các thuộc tính và hành vi từ một lớp hiện có, tạo ra mối quan hệ 'là một' (is-a)?",
+    "code": null,
+    "options": ["Tính đóng gói (Encapsulation)", "Tính kế thừa (Inheritance)", "Tính trừu tượng (Abstraction)", "Tính đa hình (Polymorphism)"],
+    "answer": "Tính kế thừa (Inheritance)"
+  },
+  {
+    "q": "Trong Python, mục đích của việc tiền tố một tên thuộc tính bằng hai dấu gạch dưới (ví dụ: `__my_attribute`) là gì?",
+    "code": null,
+    "options": ["Để tạo một phương thức tĩnh.", "Để tạo một thuộc tính lớp.", "Để làm cho các thuộc tính không thể truy cập được từ bên ngoài lớp.", "Để chỉ ra rằng thuộc tính là một hằng số."],
+    "answer": "Để làm cho các thuộc tính không thể truy cập được từ bên ngoài lớp."
+  },
+  {
+    "q": "Trong OOP, 'kết hợp' (Composition) đề cập đến điều gì?",
+    "code": null,
+    "options": ["Tập hợp các đối tượng độc lập có liên quan.", "Một cách để định nghĩa lại phương thức của lớp cha.", "Một phương pháp để ẩn chi tiết triển khai.", "Một loại đặc biệt của kế thừa."],
+    "answer": "Tập hợp các đối tượng độc lập có liên quan."
+  },
+  {
+    "q": "Tham số đầu tiên của một phương thức thể hiện (instance method) trong Python thường được gọi là gì?",
+    "code": null,
+    "options": ["`this`", "`instance`", "`cls`", "`self`"],
+    "answer": "`self`"
+  },
+  {
+    "q": "Trong một số ngôn ngữ OOP, khái niệm 'lớp final' (final class) có nghĩa là gì?",
+    "code": null,
+    "options": ["Tạo một lớp con không thể bị kế thừa thêm.", "Tạo một lớp không thể được khởi tạo.", "Tạo một lớp chỉ có các thuộc tính tĩnh.", "Tạo một lớp có tất cả các phương thức là trừu tượng."],
+    "answer": "Tạo một lớp con không thể bị kế thừa thêm."
+  },
+  {
+    "q": "Trong Python, decorator `@classmethod` được sử dụng cho mục đích gì?",
+    "code": null,
+    "options": ["Để định nghĩa một phương thức không truy cập vào thể hiện hoặc lớp.", "Để định nghĩa một thuộc tính chỉ đọc.", "Để định nghĩa một phương thức trừu tượng.", "Để định nghĩa một phương thức thuộc về chính lớp đó, chứ không phải một thể hiện cụ thể."],
+    "answer": "Để định nghĩa một phương thức thuộc về chính lớp đó, chứ không phải một thể hiện cụ thể."
+  },
+  {
+    "q": "Khi ghi đè phương thức `__init__` trong một lớp con, bạn nên gọi hàm tạo của lớp cha bằng cách nào?",
+    "code": null,
+    "options": ["`init_parent()`", "`super().__init__()`", "`self.parent_init()`", "`ParentClass.__init__(self)`"],
+    "answer": "`super().__init__()`"
+  },
+  {
+    "q": "Đâu là mô tả đúng nhất về một phương thức tĩnh (static method) trong Python?",
+    "code": null,
+    "options": ["Một phương thức được tự động gọi khi đối tượng bị hủy.", "Một phương thức không yêu cầu quyền truy cập vào thể hiện của lớp hoặc chính lớp đó.", "Một phương thức chỉ có thể được gọi từ bên trong lớp.", "Một phương thức mà tất cả các thể hiện đều chia sẻ."],
+    "answer": "Một phương thức không yêu cầu quyền truy cập vào thể hiện của lớp hoặc chính lớp đó."
+  },
+  {
+    "q": "Lợi ích chính của tính kế thừa trong OOP là gì?",
+    "code": null,
+    "options": ["Đảm bảo tất cả các thuộc tính đều là private.", "Giảm sự trùng lặp mã và tăng khả năng tái sử dụng.", "Cho phép các đối tượng có hành vi khác nhau dựa trên loại của chúng.", "Ẩn thông tin chi tiết về việc triển khai."],
+    "answer": "Giảm sự trùng lặp mã và tăng khả năng tái sử dụng."
+  },
+  {
+    "q": "Decorator `@property` trong Python được sử dụng cho mục đích gì?",
+    "code": null,
+    "options": ["Tạo một thuộc tính chỉ đọc.", "Định nghĩa một phương thức lớp.", "Định nghĩa một phương thức tĩnh.", "Để tạo một thuộc tính private."],
+    "answer": "Tạo một thuộc tính chỉ đọc."
+  },
+  {
+    "q": "Phương thức trừu tượng (abstract method) là gì trong OOP?",
+    "code": null,
+    "options": ["Một phương thức không có thân hàm và phải được lớp con ghi đè.", "Một phương thức chỉ có thể được gọi từ bên trong lớp.", "Một phương thức không bao giờ được gọi.", "Một phương thức tĩnh mà không yêu cầu thể hiện."],
+    "answer": "Một phương thức không có thân hàm và phải được lớp con ghi đè."
+  },
+  {
+    "q": "Trong ngữ cảnh OOP, 'thể hiện' (instance) là gì?",
+    "code": null,
+    "options": ["Một đối tượng được tạo từ một lớp.", "Một biến toàn cục được sử dụng trong OOP.", "Một tên khác cho một lớp.", "Một loại phương thức đặc biệt."],
+    "answer": "Một đối tượng được tạo từ một lớp."
+  },
+  {
+    "q": "Mục đích chính của việc sử dụng các lớp trừu tượng (abstract classes) trong OOP là gì?",
+    "code": null,
+    "options": ["Để khai báo tất cả các phương thức là tĩnh.", "Để tạo các lớp chỉ mang tính chất tham chiếu.", "Để tự động khởi tạo các đối tượng.", "Để ngăn chặn kế thừa từ lớp đó."],
+    "answer": "Để tạo các lớp chỉ mang tính chất tham chiếu."
+  }
+]
