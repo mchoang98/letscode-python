@@ -1,0 +1,32 @@
+[
+    {
+        "title": "1. Tính Điểm Trung Bình Môn Học",
+        "description": "Viết hàm nhận vào danh sách điểm các môn học (float) và trả về điểm trung bình làm tròn đến 2 chữ số thập phân.",
+        "function": "def diem_trung_binh(diem: list[float]) -> float:",
+        "example": "# Input: diem = [7.5, 8.0, 9.25]\n# Output: 8.25"
+    },
+    {
+        "title": "2. Tìm Sản Phẩm Giá Cao Nhất",
+        "description": "Cho danh sách giá sản phẩm, hãy tìm và trả về giá cao nhất.",
+        "function": "def gia_max(prices: list[int]) -> int:",
+        "example": "# Input: prices = [120000, 450000, 99000, 220000]\n# Output: 450000"
+    },
+    {
+        "title": "3. Lọc Email Hợp Lệ",
+        "description": "Viết hàm nhận vào danh sách email và lọc ra các email hợp lệ (chứa ký tự '@' và không có khoảng trắng).",
+        "function": "def loc_email(emails: list[str]) -> list[str]:",
+        "example": "# Input: emails = ['a@gmail.com', 'b@ yahoo.com', 'c@yahoo.com']\n# Output: ['a@gmail.com', 'c@yahoo.com']"
+    },
+    {
+        "title": "4. Tính Tổng Chi Tiêu Trong Tuần",
+        "description": "Cho danh sách chi tiêu từng ngày trong tuần, viết hàm tính tổng chi tiêu cả tuần.",
+        "function": "def tong_chi_tieu(week: list[int]) -> int:",
+        "example": "# Input: week = [100000, 200000, 150000, 0, 300000, 250000, 120000]\n# Output: 1120000"
+    },
+    {
+        "title": "5. Đếm Số Từ Trong Đoạn Văn",
+        "description": "Viết hàm nhận vào một đoạn văn bản dạng chuỗi, tách các từ và đếm xem có bao nhiêu từ.",
+        "function": "def dem_so_tu(doan: str) -> int:",
+        "example": "# Input: doan = 'Python rất thú vị và dễ học'\n# Output: 6"
+    }
+]
