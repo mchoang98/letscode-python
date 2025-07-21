@@ -1,0 +1,62 @@
+[
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "my_tuple = (1, 2, 3)\nprint(my_tuple[1])",
+    "options": ["1", "2", "3", "Lỗi truy cập"],
+    "answer": "2"
+  },
+  {
+    "q": "Tuple khác list ở điểm nào sau đây?",
+    "code": "",
+    "options": ["Có thể thay đổi", "Không thể thay đổi", "Chỉ lưu số nguyên", "Dùng để lặp vô hạn"],
+    "answer": "Không thể thay đổi"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "my_set = {1, 2, 2, 3, 3, 3}\nprint(len(my_set))",
+    "options": ["6", "3", "2", "Lỗi tập hợp"],
+    "answer": "3"
+  },
+  {
+    "q": "Tập hợp (set) trong Python có đặc điểm gì?",
+    "code": "",
+    "options": ["Có thứ tự", "Cho phép phần tử trùng", "Không cho phép phần tử trùng", "Không thể chứa chuỗi"],
+    "answer": "Không cho phép phần tử trùng"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "a = (1, 2, 3)\na[0] = 10\nprint(a)",
+    "options": ["(10, 2, 3)", "Lỗi chương trình", "(1, 2, 3)", "Không xác định"],
+    "answer": "Lỗi chương trình"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "x = (1, 2, 3)\ny = (4, 5)\nprint(x + y)",
+    "options": ["(1, 2, 3, 4, 5)", "(5, 7, 8)", "[1, 2, 3, 4, 5]", "Lỗi cộng tuple"],
+    "answer": "(1, 2, 3, 4, 5)"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "s = set('hello')\nprint(s)",
+    "options": ["{'h', 'e', 'l', 'o'}", "['h', 'e', 'l', 'o']", "'hello'", "Lỗi tập hợp"],
+    "answer": "{'h', 'e', 'l', 'o'}"
+  },
+  {
+    "q": "Phép toán nào dùng để tìm phần giao giữa hai set?",
+    "code": "",
+    "options": ["&", "|", "-", "**"],
+    "answer": "&"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "t = (1, [2, 3])\nt[1].append(4)\nprint(t)",
+    "options": ["(1, [2, 3, 4])", "(1, [2, 3])", "Lỗi tuple", "(1, 2, 3, 4)"],
+    "answer": "(1, [2, 3, 4])"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "s = {1, 2, 3}\ns.add(4)\nprint(s)",
+    "options": ["{1, 2, 3, 4}", "{4, 1, 2, 3}", "[1, 2, 3, 4]", "Lỗi vì set không thay đổi được"],
+    "answer": "{1, 2, 3, 4}"
+  }
+]
