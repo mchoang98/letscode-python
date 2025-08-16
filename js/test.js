@@ -106,12 +106,17 @@
                     const correctAnswer = item.answer;
                     const answerElement = document.querySelectorAll(".correct-answer")[index];
 
-                    if (selectedAnswer === correctAnswer) {
-                        score++;
-                        answerElement.classList.add("text-green-600");
-                    } else {
-                        answerElement.classList.add("text-red-600");
-                    }
+                   if (
+                     selectedAnswer &&
+                     selectedAnswer.trim().toLowerCase() ===
+                       correctAnswer.trim().toLowerCase()
+                   ) {
+                     score++;
+                     answerElement.classList.add("text-green-600");
+                   } else {
+                     answerElement.classList.add("text-red-600");
+                   }
+
 
                     answerElement.classList.remove("hidden");
                 });
