@@ -1,0 +1,62 @@
+[
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    x = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Lỗi chia cho 0\")",
+    "options": ["Lỗi chương trình", "Lỗi chia cho 0", "ZeroDivisionError", "Không in gì"],
+    "answer": "Lỗi chia cho 0"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    num = int(\"abc\")\nexcept ValueError:\n    print(\"Không chuyển được sang int\")",
+    "options": ["abc", "Không chuyển được sang int", "ValueError", "Lỗi chương trình"],
+    "answer": "Không chuyển được sang int"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    print(10/2)\nexcept:\n    print(\"Có lỗi xảy ra\")\nelse:\n    print(\"Không có lỗi\")",
+    "options": ["5.0", "5.0\\nKhông có lỗi", "Có lỗi xảy ra", "Không có lỗi"],
+    "answer": "5.0\nKhông có lỗi"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    x = [1,2,3]\n    print(x[5])\nexcept IndexError:\n    print(\"Lỗi chỉ số\")",
+    "options": ["1", "Lỗi chỉ số", "IndexError", "Lỗi chương trình"],
+    "answer": "Lỗi chỉ số"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    d = {\"a\":1}\n    print(d[\"b\"])\nexcept KeyError:\n    print(\"Lỗi key\")",
+    "options": ["Lỗi key", "KeyError", "None", "1"],
+    "answer": "Lỗi key"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    print(int(\"12.5\"))\nexcept ValueError:\n    print(\"Không thể ép kiểu\")",
+    "options": ["12.5", "12", "Không thể ép kiểu", "ValueError"],
+    "answer": "Không thể ép kiểu"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    f = open(\"khong_ton_tai.txt\")\nexcept FileNotFoundError:\n    print(\"Không tìm thấy file\")",
+    "options": ["Không tìm thấy file", "FileNotFoundError", "None", "Lỗi chương trình"],
+    "answer": "Không tìm thấy file"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    a = 10\n    b = 0\n    print(a/b)\nexcept ZeroDivisionError:\n    print(\"Chia 0\")\nfinally:\n    print(\"Kết thúc\")",
+    "options": ["Chia 0", "Chia 0\\nKết thúc", "Kết thúc", "ZeroDivisionError"],
+    "answer": "Chia 0\nKết thúc"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    print(\"Hello\")\n    raise Exception(\"Lỗi tuỳ chỉnh\")\nexcept Exception as e:\n    print(e)",
+    "options": ["Hello", "Lỗi tuỳ chỉnh", "Hello\\nLỗi tuỳ chỉnh", "Exception"],
+    "answer": "Hello\nLỗi tuỳ chỉnh"
+  },
+  {
+    "q": "Kết quả của đoạn code sau là gì?",
+    "code": "try:\n    x = 5\n    if x > 0:\n        raise ValueError(\"X phải <= 0\")\nexcept ValueError as e:\n    print(e)",
+    "options": ["5", "X phải <= 0", "ValueError", "Lỗi chương trình"],
+    "answer": "X phải <= 0"
+  }
+]
