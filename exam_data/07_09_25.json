@@ -1,0 +1,330 @@
+[
+    {
+        "q": "Trong Python, class là gì?",
+        "code": "",
+        "options": [
+            "Một đối tượng cụ thể",
+            "Một bản thiết kế để tạo đối tượng",
+            "Một kiểu dữ liệu nguyên thủy",
+            "Một hàm đặc biệt"
+        ],
+        "answer": "Một bản thiết kế để tạo đối tượng"
+    },
+    {
+        "q": "Object trong Python là gì?",
+        "code": "",
+        "options": [
+            "Một biến lưu kiểu dữ liệu cơ bản",
+            "Một bản thiết kế chương trình",
+            "Một thể hiện cụ thể được tạo từ class",
+            "Một module"
+        ],
+        "answer": "Một thể hiện cụ thể được tạo từ class"
+    },
+    {
+        "q": "Lập trình thủ tục khác lập trình hướng đối tượng ở điểm nào?",
+        "code": "",
+        "options": [
+            "Thủ tục tập trung vào hàm, OOP tập trung vào class và object",
+            "Thủ tục không có biến, OOP có biến",
+            "OOP chạy nhanh hơn lập trình thủ tục",
+            "Thủ tục không thể viết hàm"
+        ],
+        "answer": "Thủ tục tập trung vào hàm, OOP tập trung vào class và object"
+    },
+    {
+        "q": "Từ khóa nào dùng để định nghĩa một class trong Python?",
+        "code": "",
+        "options": [
+            "def",
+            "class",
+            "object",
+            "type"
+        ],
+        "answer": "class"
+    },
+    {
+        "q": "Thuộc tính của một object thường được khai báo trong:",
+        "code": "",
+        "options": [
+            "__init__",
+            "__str__",
+            "__main__",
+            "__name__"
+        ],
+        "answer": "__init__"
+    },
+    {
+        "q": "Trong Python, phương thức nào được gọi ngay khi object được tạo?",
+        "code": "",
+        "options": [
+            "__del__",
+            "__new__",
+            "__init__",
+            "__call__"
+        ],
+        "answer": "__init__"
+    },
+    {
+        "q": "Sự khác biệt giữa @classmethod và @staticmethod là gì?",
+        "code": "",
+        "options": [
+            "@classmethod dùng cls làm tham số đầu tiên, còn @staticmethod không dùng self hay cls",
+            "@classmethod chỉ gọi được từ object, @staticmethod chỉ gọi được từ class",
+            "@classmethod chạy nhanh hơn",
+            "@staticmethod không thể định nghĩa trong class"
+        ],
+        "answer": "@classmethod dùng cls làm tham số đầu tiên, còn @staticmethod không dùng self hay cls"
+    },
+    {
+        "q": "Biến nào sau đây là thuộc tính lớp (class attribute)?",
+        "code": "",
+        "options": [
+            "self.age",
+            "ClassName.count",
+            "self.name",
+            "object.attr"
+        ],
+        "answer": "ClassName.count"
+    },
+    {
+        "q": "Khi gọi phương thức của object, Python tự động truyền gì vào tham số đầu tiên của method?",
+        "code": "",
+        "options": [
+            "class",
+            "self",
+            "cls",
+            "object"
+        ],
+        "answer": "self"
+    },
+    {
+        "q": "Hàm __str__ trong class có mục đích gì?",
+        "code": "",
+        "options": [
+            "Xử lý ngoại lệ",
+            "Trả về chuỗi mô tả object khi dùng print",
+            "Khởi tạo thuộc tính",
+            "Xóa object"
+        ],
+        "answer": "Trả về chuỗi mô tả object khi dùng print"
+    },
+    {
+        "q": "Nguyên lý nào liên quan đến việc che giấu dữ liệu bên trong class?",
+        "code": "",
+        "options": [
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation",
+            "Abstraction"
+        ],
+        "answer": "Encapsulation"
+    },
+    {
+        "q": "Trong Python, tiền tố nào thường được dùng để biểu thị biến “private”?",
+        "code": "",
+        "options": [
+            "__",
+            "$$",
+            "private",
+            "@"
+        ],
+        "answer": "__"
+    },
+    {
+        "q": "Kế thừa trong Python cho phép:",
+        "code": "",
+        "options": [
+            "Class con sử dụng thuộc tính và phương thức của class cha",
+            "Class con chạy nhanh hơn class cha",
+            "Class con không cần constructor",
+            "Không class nào có thể kế thừa class khác"
+        ],
+        "answer": "Class con sử dụng thuộc tính và phương thức của class cha"
+    },
+    {
+        "q": "Polymorphism nghĩa là:",
+        "code": "",
+        "options": [
+            "Một method có nhiều tên khác nhau",
+            "Một class có thể có nhiều constructor",
+            "Các class khác nhau có thể cài đặt cùng một phương thức với hành vi khác nhau",
+            "Một biến có thể lưu nhiều kiểu dữ liệu"
+        ],
+        "answer": "Các class khác nhau có thể cài đặt cùng một phương thức với hành vi khác nhau"
+    },
+    {
+        "q": "Module abc trong Python dùng để:",
+        "code": "",
+        "options": [
+            "Tạo giao diện đồ họa",
+            "Xử lý số phức",
+            "Định nghĩa class trừu tượng",
+            "Tạo database"
+        ],
+        "answer": "Định nghĩa class trừu tượng"
+    },
+    {
+        "q": "Trong Python, có thể kế thừa từ nhiều class cùng lúc không?",
+        "code": "",
+        "options": [
+            "Có",
+            "Không"
+        ],
+        "answer": "Có"
+    },
+    {
+        "q": "Khi một object chứa object khác như thuộc tính, đây là:",
+        "code": "",
+        "options": [
+            "Kế thừa",
+            "Đa hình",
+            "Composition",
+            "Abstraction"
+        ],
+        "answer": "Composition"
+    },
+    {
+        "q": "Quan hệ “is-a” thường biểu thị bằng:",
+        "code": "",
+        "options": [
+            "Composition",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+        "answer": "Inheritance"
+    },
+    {
+        "q": "Một module trong Python là gì?",
+        "code": "",
+        "options": [
+            "Một gói chứa nhiều file",
+            "Một file .py có thể import",
+            "Một biến đặc biệt",
+            "Một class đặc biệt"
+        ],
+        "answer": "Một file .py có thể import"
+    },
+    {
+        "q": "File nào biến thư mục thành package trong Python?",
+        "code": "",
+        "options": [
+            "__init__.py",
+            "__main__.py",
+            "setup.py",
+            "package.json"
+        ],
+        "answer": "__init__.py"
+    },
+    {
+        "q": "Để import một module trong Python, dùng từ khóa nào?",
+        "code": "",
+        "options": [
+            "include",
+            "require",
+            "import",
+            "use"
+        ],
+        "answer": "import"
+    },
+    {
+        "q": "Lệnh nào dùng để ném ngoại lệ trong Python?",
+        "code": "",
+        "options": [
+            "throw",
+            "raise",
+            "except",
+            "try"
+        ],
+        "answer": "raise"
+    },
+    {
+        "q": "Để định nghĩa exception riêng, class cần kế thừa từ:",
+        "code": "",
+        "options": [
+            "BaseError",
+            "Exception",
+            "Error",
+            "Throwable"
+        ],
+        "answer": "Exception"
+    },
+    {
+        "q": "Khối finally được thực thi khi nào?",
+        "code": "",
+        "options": [
+            "Chỉ khi có ngoại lệ",
+            "Chỉ khi không có ngoại lệ",
+            "Luôn được thực thi, có hoặc không có ngoại lệ",
+            "Không bao giờ thực thi"
+        ],
+        "answer": "Luôn được thực thi, có hoặc không có ngoại lệ"
+    },
+    {
+        "q": "Design pattern Singleton dùng để:",
+        "code": "",
+        "options": [
+            "Tạo nhiều object giống nhau",
+            "Đảm bảo chỉ có một instance của class",
+            "Cho phép kế thừa nhiều class",
+            "Quản lý lỗi tốt hơn"
+        ],
+        "answer": "Đảm bảo chỉ có một instance của class"
+    },
+    {
+        "q": "Factory pattern giải quyết vấn đề gì?",
+        "code": "",
+        "options": [
+            "Tạo object mà không cần biết chính xác class nào được dùng",
+            "Tăng tốc chương trình",
+            "Bảo mật dữ liệu",
+            "Giảm dung lượng bộ nhớ"
+        ],
+        "answer": "Tạo object mà không cần biết chính xác class nào được dùng"
+    },
+    {
+        "q": "Pattern nào phù hợp nếu muốn nhiều object được thông báo khi một object thay đổi?",
+        "code": "",
+        "options": [
+            "Factory",
+            "Singleton",
+            "Observer",
+            "Builder"
+        ],
+        "answer": "Observer"
+    },
+    {
+        "q": "Nếu muốn quản lý danh sách học sinh, mỗi học sinh có tên và tuổi, ta nên:",
+        "code": "",
+        "options": [
+            "Dùng list lưu tất cả tên và tuổi",
+            "Dùng class Student, mỗi học sinh là một object",
+            "Dùng biến toàn cục để lưu dữ liệu",
+            "Dùng dictionary duy nhất để lưu tất cả"
+        ],
+        "answer": "Dùng class Student, mỗi học sinh là một object"
+    },
+    {
+        "q": "Khi tách chương trình lớn thành nhiều module, lợi ích chính là gì?",
+        "code": "",
+        "options": [
+            "Chạy nhanh hơn",
+            "Dễ bảo trì, dễ tái sử dụng",
+            "Tự động tránh lỗi",
+            "Không cần test"
+        ],
+        "answer": "Dễ bảo trì, dễ tái sử dụng"
+    },
+    {
+        "q": "Nếu muốn định nghĩa phương thức không phụ thuộc vào object hay class, ta nên dùng:",
+        "code": "",
+        "options": [
+            "Instance method",
+            "Class method",
+            "Static method",
+            "Abstract method"
+        ],
+        "answer": "Static method"
+    }
+]
